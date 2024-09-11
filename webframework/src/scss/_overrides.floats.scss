@@ -1,0 +1,60 @@
+//------------------------------------*\
+//   #FLOATS
+//------------------------------------*/
+
+.u-float {
+    &--left {
+        float:left;
+        &--mobile {
+            @include breakpoint($screen-only, $mobile-to) {
+                float:left;
+            }
+        }
+        &--tablet {
+            @include breakpoint($screen-only, $tablet-from, $tablet-to) {
+                float:left;
+            }
+        }
+        &--desktop {
+            @include breakpoint($screen-only, $desktop-from) {
+                float:left;
+            }
+        }
+    }
+    &--right {
+        float:right;
+        &--mobile {
+            @include breakpoint($screen-only, $mobile-to) {
+                float:right;
+            }
+        }
+        &--tablet {
+            @include breakpoint($screen-only, $tablet-from, $tablet-to) {
+                float:right;
+            }
+        }
+        &--desktop {
+            @include breakpoint($screen-only, $desktop-from) {
+                float:right;
+            }
+        }
+    }
+    &--none {
+        float:none;
+        &--mobile {
+            @include breakpoint($screen-only, $mobile-to) {
+                float:none;
+            }
+        }
+        &--tablet {
+            @include breakpoint($screen-only, $tablet-from, $tablet-to) {
+                float:none;
+            }
+        }
+        &--desktop {
+            @include breakpoint($screen-only, $desktop-from) {
+                float:none;
+            }
+        }
+    }
+}

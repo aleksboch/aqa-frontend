@@ -1,0 +1,84 @@
+// ------------------------------------
+//   #TABLES
+//   styles
+// ------------------------------------
+// 
+// responsive table css based on http://codepen.io/geoffyuen/pen/FCBEg
+// 
+// Responsive table method using display:block and data attributes
+.c-table{
+    margin-bottom: 1rem;
+    //table-layout: fixed;
+    width: 100%;
+    //word-wrap: break-word;
+    // &__heading--mobile{ 
+    //     @include breakpoint($screen-only, $mobile-to) {
+    //         html.rwd & {
+    //             display: none; 
+    //         }
+    //     }
+    //    }   
+    // @include breakpoint($screen-only, $mobile-to) {
+    //     html.rwd & {
+        
+    //         &__tr--mobile {
+    //             border: .0625rem solid $color-table-tr-border;
+    //         }
+    //         &__td--mobile {
+    //             display: block;
+    //             padding-left: 8rem;
+    //             position: relative;
+    //             &:before {
+    //                 content: attr(data-th-mobile);//use the data attribute to give the column name on the mobile version and give eit same colour as the th attribute 
+    //                 width: 6.5rem;
+    //                 display: inline-block;
+    //                 color: $color-table-td-rwd-header;
+    //                 background-color: $color-table-td-rwd-background;
+    //                 padding: .5rem .5rem .5rem .5rem;
+    //                 margin: -.5rem 1.5rem -.9rem -8rem;
+    //                 position: absolute;
+    //                 height: 100%;
+    //             }
+    //         }
+    //     }
+    // }
+    //styling for sort headers on tables - used in conjunction with angular json array 
+    &__th--sort{
+        width: auto;
+        min-width: 2rem;
+        padding-left: 2rem;
+        background: url(#{$img-path}/#{$icon-updown-arrow-white}) no-repeat center right $color-brand-secondary;
+        background-size: 2rem auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &-dsc{
+            padding-left: 2rem;
+            background: url(#{$img-path}/#{$icon-down-arrow-white}) no-repeat center center $color-brand-secondary;
+            background-size: 1.2rem auto;
+        }
+
+        &--asc {
+            width: auto;
+            min-width: 2rem;
+            padding-left: 2rem;
+            background: url(#{$img-path}/#{$icon-up-arrow-white}) no-repeat center center $color-brand-secondary;
+            background-size: 1.2rem auto;
+        }
+
+    }
+
+    &__th {
+        &--disabled {
+            background-color: $color-disabled;
+        }
+    }
+
+    &__td {
+        &--disabled {
+            color: $color-disabled;
+        }
+    }  
+}

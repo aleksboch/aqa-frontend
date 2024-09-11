@@ -1,0 +1,41 @@
+// ------------------------------------
+//   #NOTIFICATIONS
+//   styles
+// ------------------------------------
+
+.c-notification {
+    padding: 1rem 0 0 1rem;
+    margin: 1rem 0;
+
+    &--success {
+        background-color: $color-notification-success;
+        border: 0.0625rem solid $color-notification-border-success;
+    }
+
+    &--important {
+        background-color: $color-notification-important;
+        border: 0.0625rem solid $color-notification-border-important;
+    }
+
+    &--warning {
+        background-color: $color-notification-warning;
+        border: 0.0625rem solid $color-notification-border-warning;
+    }
+
+    &--danger {
+        background-color: $color-notification-danger;
+        border: 0.0625rem solid $color-notification-border-danger;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &.is-active {
+        display: block;
+    }
+
+    &.inactive {
+        display: none;
+    }
+}

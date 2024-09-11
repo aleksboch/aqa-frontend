@@ -1,0 +1,30 @@
+//
+// #SPECIAL EFFECTS OVERRIDES
+// CSS filters, transitions, shadows etc
+//
+
+// Brightness filters
+.u-ef-brightness {
+    &-0-5 {
+        filter: brightness(.5);
+    }
+    &-0-8 {
+        filter: brightness(.8);
+    }
+    &-0-97 {
+        filter: brightness(.97);
+    }
+    &-0-98 {
+        filter: brightness(.98);
+    }
+}
+
+// Opacity
+
+// Transitions
+
+// Shadows
+.u-ef-shadow {
+    box-shadow: 0 0 .5rem 0 darken($color-grey, 20%),
+                0 1.2rem 1rem -0.5rem darken($color-grey, 20%);
+}

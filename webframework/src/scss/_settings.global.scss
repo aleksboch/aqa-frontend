@@ -1,0 +1,62 @@
+// ------------------------------------
+//   #GLOBAL
+//   styles
+// ------------------------------------
+
+// Project-level settings and setup.
+
+// Base typographical styles and baseline grid.
+$base-font-size:    1rem;
+$base-line-height:  1.4rem;
+
+// Standardise some UI treatments.
+$base-radius:       0;
+$base-transition:   0.333333333s;
+
+// Do not modify: reassigning variables for use throughout the project.
+$base-spacing-unit: $base-line-height;
+
+//Custom media queries
+//Mobile
+$media-mobile-from:"(min-width: 0)";
+$media-mobile-to:"(max-width: 40em)";
+$media-mobile-small-from:"(min-width: 0)";
+$media-mobile-small-to:"(max-width: 390px)";
+
+//Tablet
+$media-tablet-from:"(min-width: 40.063em)";
+$media-tablet-small-to: "(max-width: 51.24em)";
+$media-tablet-small-from: "(min-width: 51.24em)";
+$media-tablet-to:"(max-width: 64em)";
+
+//Desktop
+$media-desktop-from:"(min-width: 64.063em)";
+$media-desktop-to:"(max-width: 90em)";
+
+//Large desktop and beyond
+$media-desktop-large-from:"(min-width: 90.063em)";
+
+$media-screen-only:"only screen";
+
+//Webkit only query
+$media-webkit:"screen and (-webkit-min-device-pixel-ratio: 0)";
+
+//Path to images relative to scss
+//filenames for icons are configured in _components.icons
+$img-path: "../img";
+
+//Path to image placeholder
+$image-placeholder: "image-placeholder.png";
+
+//Path to video placeholder
+$video-placeholder: "video-placeholder.png";
+
+//Widths
+$width-max-width: 100%;
+$width-large-desktop: 90em;
+$width-desktop: 100%;
+
+//Borders
+$border-width: 0.0625rem;
+$border-style: solid;
+$border-style--dashed: dashed;

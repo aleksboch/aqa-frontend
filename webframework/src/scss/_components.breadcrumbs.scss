@@ -1,0 +1,70 @@
+// ------------------------------------
+//   #BREADCRUMBS
+//   styles
+// ------------------------------------
+
+.c-breadcrumbs {
+    padding: 0 .5rem .5rem;
+
+    &__ordered-list {
+        margin: 0 0 0 0;
+        display: block;
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+
+        &__item {
+            display: inline-block;
+            white-space: nowrap;
+            position: relative;
+            color: $color-brand-primary;
+            text-decoration: none;
+            font-size: 1rem;
+
+            @include font-family(default);
+            @include font-weight(medium);
+
+            &::before {
+                content: "/";
+                font-size: 1rem;
+                text-decoration: none;
+                color: #4c4c4b;
+                padding-right: 0.5rem;
+            }
+
+            &--first::before {
+                content: ' ';
+            }
+
+            &__link {
+                text-decoration: none;
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+                color: inherit;
+
+                &:hover, &:active, &:focus {
+                    text-decoration: underline;
+                    background-color: $color-page-background;
+                }
+
+                &--home {
+                    font-size: 0;
+                    color: #412878;
+                    padding-left: 0.3rem;
+
+                    &:before {
+                        position: absolute;
+                        content: " ";
+                        background-image: url(#{$img-path}/#{$icon-home-purple});
+                        background-size: 0.9rem;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 0.9rem;
+                        height: 1.5rem;
+                        left: -0rem;
+                    }
+                }
+            }
+        }
+    }
+}

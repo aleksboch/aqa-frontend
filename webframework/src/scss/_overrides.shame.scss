@@ -1,0 +1,101 @@
+// ------------------------------------
+//   #SHAME
+//   styles
+// ------------------------------------
+ 
+._u-b3-125 {
+	border-radius: .3125rem;
+}
+
+
+// Safari 5.1-6 
+// 
+// hack for search icon to appear as background position edge modifiers aren't supported
+// also, different svg because of viewport size ie. whitespace issues
+_::-moz-svg-foreign-content, :root .c-top-nav-mobile__element--search__link a {  
+    background: transparent url(#{$img-path}/#{$icon-safari-search-purple}) no-repeat top center;
+    background-size: 2em auto !important;
+}
+
+//  c-logo width hack as image was clipped
+_::-moz-svg-foreign-content, :root .c-logo {  
+    #{"[; "}width: 9.2rem#{" ;]" }; 
+}
+
+
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    //ie10 svg logo print crash
+	.c-logo__svg {
+		width: 110%;
+    }
+    //ie10, ie11 and edge hack to get smaller icons to display properly
+    .c-icon.c-icon--small { background-size: $icon-size-small $icon-size-small;  }
+   .c-icon.c-icon--xsmall{ background-size: $icon-size-xsmall $icon-size-xsmall; }
+   .c-icon.c-icon--medium{ background-size: $icon-size-medium $icon-size-medium; }
+   .c-icon.c-icon--large {background-size: $icon-size-large $icon-size-large;}  
+   .c-icon.c-icon--xlarge {background-size: $icon-size-xlarge $icon-size-xlarge;}  
+   .c-icon {background-size: $icon-size $icon-size;}  
+}
+
+
+.u-m-pr0 {
+
+    @include breakpoint($screen-only, $tablet-to) {
+    padding-right:0px;       
+    }
+
+}
+
+ 
+
+//Summer 19 campaign logo size change
+$media-summer-to:"(max-width: 57.875em)";
+//Summer 19 header logo and navigational hacks
+._u-campaign {
+
+    & .c-primary-nav__list__item:first-child .c-primary-nav__link,
+    & .c-primary-nav__list__item:first-child .c-primary-nav__link:link {
+        color:  $color-brand-red;
+        @include hocus {
+           
+            text-decoration: underline;
+            background-color: $color-page-background;
+
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    background-color: $color-brand-primary-highlight;
+                }
+            }
+        }
+        
+    }
+    
+    @include breakpoint($screen-only, $tablet-from, $tablet-small-to) {
+        & .c-primary-nav__list__item .c-primary-nav__link .c-primary-nav__link__text {
+            font-size: .975em;
+        }
+        & .c-primary-nav__list__item .c-primary-nav__link .c-primary-nav__link__text {
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+    }
+
+    & .c-logo__tagline {
+        @include breakpoint($screen-only, $media-summer-to) {
+            opacity: 0;
+        }        
+    }
+
+    & .c-logo {
+        @include breakpoint($screen-only, $media-summer-to) {
+            margin-top: 0;
+            height: 2.375em;
+            width: 6.75em;
+            position: absolute;
+            left: 1em;
+        }
+    }
+
+}

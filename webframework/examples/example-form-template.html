@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js rwd" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#412878">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preload" href="css/fonts/aqachevinpro-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/aqachevinpro-demibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/aqachevinpro.min.css" as="style">
+    <link rel="preload" href="css/styles.min.css" as="style">
+    <title>Example form</title>
+    <style type="text/css" id="critical-css">/* Critical css styles here */</style>
+    <script>(function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement);</script>
+    <link rel="stylesheet" href="css/aqachevinpro.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/print.min.css" media="print">
+</head>
+<body>
+
+    <div class="o-page js-page">
+
+        <div class="content-wrapper">
+
+            <main class="s-content" id="main-content" role="main">
+                <h1>Example form</h1>
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-xs col-xs-12">
+        
+                        <form class="c-form">
+        
+                            <fieldset>
+                                <legend class="u-h3">1. Who you are</legend>
+        
+                                <label class="c-form__label" for="first-name" id="first-name-label">First name</label>
+                                <input class="c-form__input" name="first-name" type="text" aria-labelledby="first-name-label">
+        
+                                <label class="c-form__label" for="last-name" id="last-name-label">Last name</label>
+                                <input class="c-form__input" name="last-name" type="text" aria-labelledby="last-name-label">
+        
+                                <label class="c-form__label" for="mobile-number" id="mobile-number-label">Mobile number</label>
+                                <input class="c-form__input" name="mobile-number" type="tel" aria-labelledby="mobile-number-label">
+        
+                                <label class="c-form__label" for="email-address" id="email-address-label">Email address</label>
+                                <input class="c-form__input" name="email-address" type="email" aria-labelledby="email-address-label">
+        
+                                <label class="c-form__label" for="email-address-confirm" id="email-address-confirm-label">Confirm email address</label>
+                                <input class="c-form__input" name="email-address-confirm" type="email" aria-labelledby="email-address-confirm-label">
+        
+                            </fieldset>
+        
+                            <fieldset>
+                                <legend class="u-h3">2. What you do</legend>
+        
+                                <label class="c-form__label">Do you currently teach an AQA qualification?</label><br>
+        
+                                <div class="u-mb1">
+                                    <input name="teach-aqa-qual" type="radio" id="teach-aqa-qual-1" class="c-form__input c-form__input__radio" value="Yes">
+                                    <label class="c-form__label-radio" for="teach-aqa-qual-1"><span class="c-form__label-radio-grey-outline c-form__label-radio-grey-outline-circle"><span class="c-form__label-radio-grey-outline-circle-inner-circle"></span></span>Yes</label>
+        
+                                    <input name="teach-aqa-qual" type="radio" id="teach-aqa-qual-2" class="c-form__input c-form__input__radio" value="No">
+                                    <label class="c-form__label-radio" for="teach-aqa-qual-2"><span class="c-form__label-radio-grey-outline c-form__label-radio-grey-outline-circle"><span class="c-form__label-radio-grey-outline-circle-inner-circle"></span></span>No</label>
+                                </div>
+        
+                                <label class="c-form__label" for="about-yourself" id="about-yourself-label">Tell us a little
+                                    about yourself</label>
+                                <textarea name="about-yourself" aria-labelledby="about-yourself-label"></textarea>
+        
+                            </fieldset>
+        
+                            <fieldset>
+                                <legend class="u-h3">3. Updates</legend>
+        
+                                <p>Tick the boxes to indicate which updates you would like to receive.</p>
+        
+                                <input type="checkbox" id="english-update" name="english-update" checked="checked" class="c-form__input c-form__input__checkbox" value="English">
+                                <label class="c-form__label-checkbox" for="english-update"><span class="c-form__label-checkbox-grey-outline"><span></span></span>English</label>
+        
+                                <input type="checkbox" id="maths-update" name="maths-update" checked="checked" class="c-form__input c-form__input__checkbox" value="Maths">
+                                <label class="c-form__label-checkbox" for="maths-update"><span class="c-form__label-checkbox-grey-outline"><span></span></span>Maths</label>
+        
+                                <input type="checkbox" id="science-update" name="science-update" checked="checked" class="c-form__input c-form__input__checkbox" value="Science">
+                                <label class="c-form__label-checkbox" for="science-update"><span class="c-form__label-checkbox-grey-outline"><span></span></span>Science</label>
+        
+                                <input type="checkbox" id="biology-update" name="biology-update" checked="checked" class="c-form__input c-form__input__checkbox" value="Biology">
+                                <label class="c-form__label-checkbox" for="biology-update"><span class="c-form__label-checkbox-grey-outline"><span></span></span>Biology</label>
+        
+                                <input type="checkbox" id="chemistry-update" name="chemistry-update" checked="checked" class="c-form__input c-form__input__checkbox" value="Chemistry">
+                                <label class="c-form__label-checkbox" for="chemistry-update"><span class="c-form__label-checkbox-grey-outline"><span></span></span>Chemistry</label>
+        
+                                <br>
+        
+                                <p>We will use the above information to send you updates on your subjects of interest as well as
+                                    appropriate support services and initiatives.</p>
+                                <input type="checkbox" id="not-opt-in" name="not-opt-in" checked="" class="c-form__input c-form__input__checkbox" value="Not opt in">
+                                <label class="c-form__label-checkbox" for="not-opt-in"><span class="c-form__label-checkbox-grey-outline"><span></span></span>Please tick this box if
+                                    you do not wish to receive this information</label>
+        
+                                <div>
+                                    <input class="c-btn c-btn--small c-btn--primary c-form__input__submit-btn c-arrow-right--white c-arrow-right" type="submit" value="Submit Button">
+                                </div>
+        
+                            </fieldset>
+        
+                        </form>
+        
+                    </div>
+        
+                </div>                
+
+            </main>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

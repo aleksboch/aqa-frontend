@@ -1,0 +1,41 @@
+//------------------------------------*\
+//  #TABLE-BARE
+//------------------------------------*/
+
+.o-table-bare {
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    th {
+        background-color: inherit;
+        border: none;
+        color: $color-page-text;
+        @include font-family(default);
+        @include font-size(1rem);
+        font-weight: bold;      
+        padding: 0 1rem .25rem 0;
+    }
+
+    td {
+        border: none;
+        color: $color-page-text;
+        @include font-family(default);
+        @include font-size(1rem);
+        font-weight: normal;      
+        padding: 0 1rem .25rem 0;
+    }
+
+    tr {
+        background-color: inherit;
+        &:nth-child(even) {
+            background-color: inherit;
+        }
+        &:nth-child(odd) {
+            background-color: inherit;
+        }
+        &:last-child {
+            border-bottom: none;
+        }        
+    }
+}

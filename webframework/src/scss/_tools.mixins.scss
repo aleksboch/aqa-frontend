@@ -1,0 +1,265 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+// Global mixins available to the entire project. Define file-specific
+// mixins inside the file to which they relate.
+
+
+
+// Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
+//
+// .simple-usage {
+//   @include rem(padding, 10px);
+// }
+
+@mixin rem($property, $value) {
+    #{$property}: $value;
+    #{$property}: rem($value);
+}
+
+
+
+// Mixin to drop micro clearfix into a selector.
+//
+// .simple-usage {
+//   @include clearfix();
+// }
+//
+// .detailed-usage {
+//   @include clearfix(important);
+// }
+
+@mixin clearfix($important: false) {
+
+    // Determine whether or not to make declarations important.
+    @if ($important == false) {
+        $important: null;
+    } @else {
+        $important: !important;
+    }
+
+    &:after {
+        content: "" $important;
+        display: table $important;
+        clear: both $important;
+    }
+
+}
+
+
+
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+
+
+// Generate @media query
+// Example usage:
+// @include breakpoint($media-screen-only, $media-mobile-to) {}
+// @include breakpoint($media-screen-only, $media-desktop-from, $media-desktop-to) {}
+@mixin breakpoint($args...) {
+    $query: "";
+    @each $arg in $args {
+        $op: "";
+        @if ( $query != "" ) {
+            $op: " and ";
+        }
+        $query: $query + $op + $arg;
+    }
+    @media #{$query}  { @content; }
+}
+
+
+//Generate keyframes for browsers
+// Example usage
+// @include keyframes(slide-down) {
+//  0% { opacity: 1; }
+//  90% { opacity: 0; }
+// }
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+
+// Generate animations for browsers
+// Example usage
+// @include animation('slide-down 5s 3');
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+
+
+// Generate transitions for browsers
+// Example usage
+// @include transition(color .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+
+// Generate flex display properties
+// Example usage
+// @include display-flex;
+@mixin display-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+//----------------------------------------------------------------------
+
+// Flexbox Justify Content
+//
+// The 'justify-content' property aligns flex items along the main axis
+// of the current line of the flex container. This is done after any flexible
+// lengths and any auto margins have been resolved. Typically it helps distribute
+// extra free space leftover when either all the flex items on a line are
+// inflexible, or are flexible but have reached their maximum size. It also
+// exerts some control over the alignment of items when they overflow the line.
+//
+// Note: 'space-*' values not supported in older syntaxes.
+//
+// Values: flex-start | flex-end | center | space-between | space-around
+// Default: flex-start
+//
+// http://w3.org/tr/css3-flexbox/#justify-content-property
+
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;    
+  } @else {
+    -webkit-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+  // Shorter version:
+  @mixin flex-just($args...) { @include justify-content($args...); }
+
+// Prefix class with an element
+// e.g.
+// 
+// if you have sass like 
+// 
+// .my-class-name {
+//    color:white;
+//  } 
+//  
+//  and you want enforce this class being applied to a div element so that the css output is
+//  
+//   div.my-class-name{color:white;}
+//   
+//   You can do the following:
+//   
+//   .my-class-name {
+//      @at-root {
+//        @include prefix-element(div, &) {
+//          color:white;
+//        }
+//      }
+//    }
+//    
+
+@mixin image-placeholder($image: $image-placeholder) {
+  background: url(#{$img-path}/#{$image}) no-repeat center;
+  background-color: $color-grey-lightest;
+}
+
+@mixin loading-animation {
+    margin: 1em auto;
+    font-size: 1em;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 0.25em solid rgba($color-brand-primary, 0.2);
+    border-right: 0.25em solid rgba($color-brand-primary, 0.2);
+    border-bottom: 0.25em solid rgba($color-brand-primary, 0.2);
+    border-left: 0.25em solid $color-brand-primary;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+@mixin prefix-element($elem, $classname) {
+    #{$elem}#{$classname} {
+        @content;
+    }
+}
+//The arguments for the mixin now have a default value, 
+//if you want to call it with only one argument. 
+//You can call arguments explicitly by using the keyword syntax. 
+//In my example I wanted only the second argument, so I did this: @include transformNew($translate: translate(10px, 40px));. 
+//If you only need the first argument, then it is enough to just pass the value, no need for the keyword.
+
+@mixin transformNew($rotate: 0, $translate: translate(0, 0)) {
+  -moz-transform: rotate(#{$rotate}deg) $translate;
+    -o-transform: rotate($rotate) $translate;
+    -ms-transform: rotate(#{$rotate}deg) $translate;
+    -webkit-transform: rotate(#{$rotate}deg) $translate;
+    transform: rotate(#{$rotate}deg) $translate;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-js rwd" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#412878">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preload" href="css/fonts/aqachevinpro-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/aqachevinpro-demibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/aqachevinpro.min.css" as="style">
+    <link rel="preload" href="css/styles.min.css" as="style">
+    <title>AQA basic template</title>
+    <style type="text/css" id="critical-css">/* Critical css styles here */</style>
+    <script>(function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement);</script>
+    <link rel="stylesheet" href="css/aqachevinpro.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/print.min.css" media="print">
+</head>
+<body>
+    <!--googleoff: snippet-->
+    <!--noindex-->
+    <noscript>
+        <div class="c-notification c-notification--danger u-t-center">
+            <p>This website works best with JavaScript switched on.
+                <a href="https://www.enable-javascript.com/">Please enable JavaScript</a>
+            </p>
+        </div>
+    </noscript>
+    <!--endnoindex-->
+    <!--googleon: snippet-->
+    <div class="o-page js-page">
+        <a class="sr-only" href="#main-content">skip to content </a>
+        <header class="c-header" id="js-header--mobile" role="banner">
+            <div class="c-header__inner row">
+                <div class="c-logo">
+                    <a href="https://www.aqa.org.uk/">
+                        <picture title="AQA logo" aria-labelledby="c-logo__title" role="picture">
+                          <source media="(max-width: 51.24em)" srcset="img/c-icon__AQA-logo-no-strapline--rgb.svg">
+                          <source media="(min-width: 51.24em)" srcset="img/c-icon__AQA-logo-strapline--rgb.svg">
+                          <img src="img/c-icon__AQA-logo-strapline--rgb.svg" alt="AQA logo">
+                        </picture>
+                      </a>
+                </div>
+                <div class="c-header__inner__wrapper-nav col-xs end-xs">
+                    <nav class="c-top-nav row" role="navigation">
+                        <ul class="c-top-nav__list hide-mobile col-xs">
+                            <li class="c-top-nav__list__item js-mobile-sub-nav-item">
+                                <a class="c-top-nav__list__item__link" href="https://www.aqa.org.uk/help-and-contacts">
+                                    <span>Contact us</span>
+                                </a>
+                            </li>
+                            <li class="c-top-nav__list__item js-mobile-sub-nav-item">
+                                <a class="c-top-nav__list__item__link" href="https://www.aqa.org.uk/about-us">
+                                    <span>About us</span>
+                                </a>
+                            </li>
+                            <li class="c-top-nav__list__item js-dropdown-parent" data-dropdown="js-login-dropdown">
+                                <a class="c-top-nav__list__item__link c-top-nav__list__item__link--login" id="js-top-nav-login"
+                                    href="https://www.aqa.org.uk/log-in">Log in</a>
+
+                            </li>
+                        </ul>
+                        <form class="c-searchbox c-searchbox--mobile" id="js-searchbox--mobile" role="search" method="get" action="https://www.aqa.org.uk/search?">
+                            <label for="query" class="sr-only" id="js-mobile-search-label">Search:</label>
+                            <input type="hidden" name="collection" value="aqa-web-meta">
+                            <input type="hidden" name="form" value="web">
+                            <input type="search" value="" name="query" placeholder="Site search" id="query" class="c-searchbox__field c-searchbox__field--header">
+                            <button type="submit" class="c-searchbox__submit" title="Search" aria-labelledby="js-mobile-search-label"></button>
+                        </form>
+                        <nav class="col-xs end-xs c-top-nav-mobile mobile-only">
+                            <ul class="c-top-nav-mobile__list">
+                                <li class="c-top-nav-mobile__element c-top-nav-mobile__element--login__link js-dropdown-parent" data-dropdown="js-login-dropdown">
+                                    <a href="https://www.aqa.org.uk/log-in" id="js-login-toggle" class="c-top-nav-mobile__link">Log in</a>
+
+                                </li>
+                                <li class="c-top-nav-mobile__element c-top-nav-mobile__element--search__link">
+                                    <a href="#" id="js-search-toggle" class="c-top-nav-mobile__link">Search</a>
+                                </li>
+                                <li class="c-top-nav-mobile__element c-top-nav-mobile__element--menu c-top-nav-mobile__element--menu__link" id="js-menu-link--mobile">
+                                    <a href="#" id="js-menu-toggle" class="c-top-nav-mobile__link">Menu</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </nav>
+                    <div class="c-dropdown js-dropdown" id="js-login-dropdown">
+                        <ul class="c-dropdown__list u-t-left" role="navigation">
+                            <li class="c-dropdown__list__item c-dropdown__list__item--header">
+                                <a class="c-dropdown__list__item__link c-dropdown__list__item__link--header" href="https://extranet.aqa.org.uk">e-AQA</a>
+                            </li>
+                            <li class="c-dropdown__list__item c-dropdown__list__item--header">
+                                <a class="c-dropdown__list__item__link c-dropdown__list__item__link--header" href="https://examiners.aqa.org.uk">Examiner Extranet</a>
+                            </li>
+                            <li class="c-dropdown__list__item c-dropdown__list__item--header">
+                                <a class="c-dropdown__list__item__link c-dropdown__list__item__link--header" href="https://allaboutmaths.aqa.org.uk">All About Maths</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <nav id="js-primary-nav" class="c-primary-nav" role="navigation">
+                        <span class="c-primary-nav__link__text c-primary-nav__logo">
+                            <a class="c-primary-nav__logo__link" href="/" title="Home">
+                                <span class="c-primary-nav__logo--home">Home</span>
+                            </a>
+                        </span>
+                        <ul class="c-primary-nav__list">
+                            <li class="c-primary-nav__list__item">
+                                <a class="c-primary-nav__link" href="https://www.aqa.org.uk/subjects">
+                                    <span class="c-primary-nav__link__text">Subjects</span>
+                                </a>
+                            </li>
+                            <li class="c-primary-nav__list__item">
+                                <a class="c-primary-nav__link" href="https://www.aqa.org.uk/qualifications">
+                                    <span class="c-primary-nav__link__text">Qualifications</span>
+                                </a>
+                            </li>
+                            <li class="c-primary-nav__list__item">
+                                <a class="c-primary-nav__link" href="https://www.aqa.org.uk/professional-development">
+                                    <span class="c-primary-nav__link__text">Professional development</span>
+                                </a>
+                            </li>
+                            <li class="c-primary-nav__list__item">
+                                <a class="c-primary-nav__link" href="https://www.aqa.org.uk/exams-administration">
+                                    <span class="c-primary-nav__link__text">Exams administration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <nav class="c-breadcrumbs" role="navigation">
+            <span class="sr-only">you are here</span>
+            <ol class="c-breadcrumbs__ordered-list">
+                <li class="c-breadcrumbs__ordered-list__item c-breadcrumbs__ordered-list__item--first">
+                    <a class="c-breadcrumbs__ordered-list__item__link c-breadcrumbs__ordered-list__item__link--home" href="https://www.aqa.org.uk"
+                        title="Home">Home</a>
+                </li>
+                <li class="c-breadcrumbs__ordered-list__item">
+                    <a class="c-breadcrumbs__ordered-list__item__link " href="https://digital.aqa.org.uk/dsm">Digital Service Manual</a>
+                </li>
+                <li class="c-breadcrumbs__ordered-list__item">
+                    <a class="c-breadcrumbs__ordered-list__item__link " href="#">Examples</a>
+                </li>
+                <li class="c-breadcrumbs__ordered-list__item">AQA basic template</li>
+            </ol>
+        </nav>
+        <div class="content-wrapper">
+            <nav class="c-sub-nav" id="js-sub-nav" role="navigation">
+                <ul class="c-sub-nav__list">
+                    <li class="c-sub-nav__item is-active">
+                        <a href="#" class="c-sub-nav__item__link">
+                            <span class="c-sub-nav__item__link__text">AQA basic template</span>
+                        </a>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <a href="#" class="c-sub-nav__item__link">
+                            <span class="c-sub-nav__item__link__text">Example nav item</span>
+                        </a>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <a href="#" class="c-sub-nav__item__link">
+                            <span class="c-sub-nav__item__link__text">Example nav item</span>
+                        </a>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <a href="#" class="c-sub-nav__item__link">
+                            <span class="c-sub-nav__item__link__text">Example nav item</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="s-content" id="main-content" role="main">
+                <h1>AQA basic template</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+            </main>
+        </div>
+        <footer class="c-footer background-color--grey-black" role="contentinfo">
+            <ul class="c-footer__list col-xs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <li class="c-footer__list__item">
+                    <a class="c-footer__list__item__link c-icon c-icon--right c-icon__right-arrow--white" href="https://www.aqa.org.uk/about-us/accessibility">Accessibility</a>
+                </li>
+                <li class="c-footer__list__item">
+                    <a class="c-footer__list__item__link c-icon c-icon--right c-icon__right-arrow--white" href="https://www.aqa.org.uk/about-us/terms-and-conditions#copyright">Copyright</a>
+                </li>
+                <li class="c-footer__list__item">
+                    <a class="c-footer__list__item__link c-icon c-icon--right c-icon__right-arrow--white" href="https://www.aqa.org.uk/about-us/privacy-statement">Privacy policy</a>
+                </li>
+                <li class="c-footer__list__item">
+                    <a class="c-footer__list__item__link c-icon c-icon--right c-icon__right-arrow--white" href="https://www.aqa.org.uk/about-us/terms-and-conditions">Terms and conditions</a>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-xs col-xs-6">
+                    <div class="c-footer__social-row">
+                        <a class="c-footer__social-row__item c-footer__social-row__item--twitter" href="https://twitter.com/AQA" title="Twitter">Twitter</a>
+                        <a class="c-footer__social-row__item c-footer__social-row__item--youtube" href="https://www.youtube.com/user/AQAEducation" title="Youtube">Youtube</a>
+                        <a class="c-footer__social-row__item c-footer__social-row__item--linkedin" href="https://www.linkedin.com/company/aqa" title="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-xs col-xs-6 end-xs">
+                    <div class="c-logo--white c-footer__logo"></div>
+                </div>
+                <div class="col-xs col-xs-12 col-md-3 col-lg-2 c-footer__copyright-text">
+                    <p>&copy; 2022 AQA</p>
+                </div>
+                <div class="col-xs col-xs-12 col-md-8 col-lg-7 c-footer__copyright-text">
+                    <p>AQA is not responsible for the content of external sites</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

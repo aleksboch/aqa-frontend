@@ -1,0 +1,167 @@
+// ------------------------------------
+//   #SEARCHBOX
+//   styles
+// ------------------------------------
+.c-searchbox {
+    vertical-align: bottom;
+    margin: 0;
+    //searchbox variant for the facted resource page
+    &--faceted-search {
+        position: relative;
+        top: .6rem;
+
+        @include breakpoint ($screen-only, $mobile-to) {
+            html.rwd & {
+                top: 0;
+            }
+        }
+    }
+
+    //to shift the top links below the searchbox for MVP+
+    @include breakpoint ($media-tablet-from, $media-tablet-to) {
+        width: 100%;
+    }
+
+    @include breakpoint ($screen-only, $mobile-to) {
+        
+        html.rwd & {
+
+            &--mobile {
+                @include display-flex;
+                box-sizing: border-box;
+                position: absolute;
+                top: 2em;
+                left: 0;
+                width: 100%;
+                z-index: 60;
+                background-color: white;
+                -webkit-transition: all 0.1s ease-in-out;
+                -moz-transition: all 0.1s ease-in-out;
+                -o-transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out;
+                overflow: hidden;
+                padding: 1em .65em;
+                margin-top: 2em;
+                visibility: hidden;
+                opacity: 0; 
+
+
+                &.is-active {
+                    visibility: visible;
+                    opacity: 1;
+                    position:fixed;
+                    top:3rem;
+                }      
+
+            }
+        }
+    }
+
+    @include breakpoint ($screen-only, $mobile-small-to) {
+        
+        html.rwd & {
+
+            &.is-active {
+                top:2rem;
+            }      
+
+        }
+    }
+
+    &__mobile {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    &__submit {
+        @at-root {
+            @include prefix-element(button, &) {
+                background-color: $color-search-btn;
+                border: 1px solid $color-search-btn;
+                background-image: url(#{$img-path}/#{$icon-search-white});
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 1.4rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                vertical-align: bottom;
+
+                &:focus {
+                    @include transition(all 0.35s ease-in-out);
+                    box-shadow: 0 0 .3125rem $color-brand-blue;
+                    border: .0625rem solid $color-brand-blue;
+                    outline: 0;
+                }
+
+                &--loading {
+                    background-image: url(#{$img-path}/#{$icon-anim-loading-white});
+                    background-size: 1.5rem;
+
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                        background-image: url(#{$img-path}/#{$gif-anim-loading-white});
+                    }
+                }
+            }
+        }
+    }
+
+    &__field {
+        @at-root {
+            @include prefix-element(input, &) {
+                @include font-family(default);
+                background-color: $color-search-filter-bg;
+                border: 1px solid $color-search-btn; 
+                float: left;
+                width: calc(100% - 2.5rem);
+                font-size: 1rem;
+                height: 2.5rem;
+                padding-left: 1rem;
+                box-sizing: border-box;
+                vertical-align: bottom;
+                margin: 0;
+                max-width: 100%;
+                @include breakpoint ($screen-only, $media-tablet-from, $media-tablet-small-to)
+                {
+                        html.rwd & {
+                            padding-right: .1rem;    
+                        }
+                }   
+                @include breakpoint ($screen-only, $media-tablet-from, $media-tablet-to)
+                   {
+                       html.rwd & {
+                            padding-left: .5rem;
+                            
+                       }
+                   }
+                &::placeholder {
+                    color: $color-search-btn;
+                }
+                &--header {
+                    float: none;
+                    font-size: 1rem;
+                    width: 18rem;
+
+                    @include breakpoint ($screen-only, $mobile-to) {
+                        html.rwd & {
+                            width: calc(100% - 2.5rem);
+                        }
+                    }
+                }
+
+                &--sidebar {
+
+                    @include breakpoint ($screen-only, $mobile-to) {
+                        html.rwd & {
+                            margin: 0 0 0 .9rem;
+                            width: calc(100% - 4.5rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

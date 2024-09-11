@@ -1,0 +1,79 @@
+// ------------------------------------*\
+//   #FORMS
+// \*------------------------------------
+form {
+  margin-top:1rem;
+  padding: 0;
+}
+textarea {
+    vertical-align: top;
+ }
+fieldset {
+    display: block;
+    box-sizing: border-box;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+legend {
+    font-size: 1rem;
+    padding: 0;
+}
+
+input,
+select,
+textarea {
+    border: .0625rem solid $color-grey;
+    width: 100%;
+    color: $color-forms-input-select-textarea;
+    background-color: $color-forms-input-select-background;       
+    font-size: 1rem;
+    border-radius: 0;
+    @include font-family(default);
+    margin: .5rem 0 1rem 0;
+    box-sizing: border-box;
+    padding: .5rem 0rem .5rem .5rem;
+    @include hocus() {
+        @include transition(all 0.35s ease-in-out);
+        box-shadow: 0 0 .3125rem $color-brand-blue;
+        border: .0625rem solid $color-brand-blue;
+        outline: 0;
+    }
+    &.is-inactive {
+        color: $color-forms-input-is-inactive;
+        background-color: $color-grey-light;
+        pointer-events: none;
+        border:none;
+        
+        @include transition(none);
+
+        @include hocus(){
+            box-shadow:none;
+        }
+    }
+    &.read-only {
+        color: $color-forms-input-read-only;
+        background-color: $color-grey-lightest;
+        pointer-events: none;
+        
+        @include transition(none);
+
+        @include hocus(){
+            box-shadow:none;
+        }
+    }
+     
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+///* styling for the IE field input cnacel X  */
+::-ms-clear{
+  color: $color-brand-blue;
+}
+
+// option {
+//   padding: .5rem 0;
+// }

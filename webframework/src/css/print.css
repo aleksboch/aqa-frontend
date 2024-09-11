@@ -1,0 +1,114 @@
+/* ------------------------------------
+   #PRINT STYLES 
+   ------------------------------------ */
+.print-only{
+	display:none;
+}
+
+@media print { 
+
+	.o-page{
+		width: 100%;	
+	}
+
+	.c-table{
+		width: 100%;
+		table-layout: auto;
+	}
+
+	/* Flexbox needs to be forced to use display: block as table headers and page breaks are broken */
+	.row { 
+      display: block;
+   	}
+
+/*hide header, footer, secondary navigation, hide coloured cells in colours page, breadcrumb*/
+	 .c-header__inner__wrapper-nav.col-xs,
+	 .c-notification .c-icon,
+	 .c-sub-nav, 
+	 .c-breadcrumbs__ordered-list,
+	 .tablesaw-advance-dots,
+	 .sr-only,
+	 footer{
+	 	display: none;
+  	}
+
+  	/*add outlines to browser diagram, 
+	tablesaw fixed column dividing line*/
+	.c-table__cell--current,  
+	.c-table__key--current-border{
+    	border: 3px solid #000;
+	} 
+
+		/*add outlines to browser diagram, 
+	tablesaw fixed column dividing line*/
+	.tablesaw-swipe .tablesaw-cell-persist{
+    	border-right: 3px solid #000;
+	} 
+
+	/*tablesaw fixed column divide*/
+	table th {
+	 	border-right: 1px solid #000;
+	 	color: #000;
+	 	font-weight: bold;
+	}
+
+	/*Tables, 
+	table key in browser support section, 
+	Flex box grid example outline, 
+	Input fields, 
+	borders on form buttons, 
+	code snippet box outline, 
+	Notification borders*/
+	td.c-table__cell.c-table__cell--border-sides, 
+	tbody td, 
+	thead, 
+	.c-table__table--browser th, 
+	.c-table__key--agrade,
+	.c-table__key--bgrade,
+	.c-table__key--cgrade, 
+	.bg-brand-blue,
+	input, 
+	select, 
+	textarea, 
+	input.is-inactive, 
+	.c-icon, 
+	.c-form__label-checkbox-grey-outline, 
+	.c-form__label-radio-grey-outline-circle, 
+	.c-btn, .o-content code, 
+	.c-notification--success, 
+	.c-notification--important, 
+	.c-notification--warning,
+	.c-progress-bar--active,
+	.c-form__state--error-border, 
+	.c-notification--danger{
+		border: 1px solid #000;
+	}
+
+	.c-form__state--error-border{
+		padding: .5rem 0 .5rem .5rem;
+	}
+	
+	.c-table__key--current-border{
+		padding: 8px 18px;
+	}
+
+	.c-progress-bar--active {
+    	height: 1rem;
+    	width: 100%;
+	}
+
+	textarea {
+		overflow: visible;
+		}
+  .print-only{
+		display:block;
+	}
+    
+	.no-print,
+	.c-notification, 
+	#js-cookie-wrapper, 
+	.c-icon__external-alt--blue {
+		display:none;
+	}
+
+}

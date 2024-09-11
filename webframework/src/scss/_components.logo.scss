@@ -1,0 +1,69 @@
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
+
+.c-logo {
+    height: 5rem;
+    width: 8rem;
+    border: 0;
+    opacity: 1;
+
+    &--white {
+        background-image: url(#{$img-path}/#{$icon-logo-no-strapline-white});
+        background-repeat: no-repeat;
+    }
+
+    &__svg {
+        overflow: visible !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__tagline {
+        @include breakpoint($screen-only, $tablet-small-to) {
+            //hides realising potential text from AQA logo
+            opacity: 0;
+        }
+
+
+        &.is-hidden {
+            opacity: 0;
+        }
+    }
+
+    &--small {
+        height: 2.375em;
+        width: 6.75em;
+    }
+
+    html.rwd & {
+        @include breakpoint($screen-only, $mobile-to) {
+            margin-top: 0.5rem;
+/*            height: 2.375em;
+            width: 6.75em;*/
+            position: absolute;
+            left: 1em;
+        }
+        @include breakpoint($screen-only, $mobile-small-to) {
+            margin-top: 1.5rem;
+            width: 6.5rem;
+            position: absolute;
+            left: 0.5rem;
+        }
+    }
+
+    &__exampro{
+        background-image: url(#{$img-path}/#{$icon-exampro-logo});
+        background-repeat: no-repeat;
+        height: 3.5rem;
+        width: 100%;
+    }
+    &__teachit{
+        background-image: url(#{$img-path}/#{$icon-teachit-logo});
+        background-repeat: no-repeat;
+        height: 3.5rem;
+        width: 100%;
+    }
+}
+

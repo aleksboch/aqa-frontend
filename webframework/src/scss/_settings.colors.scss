@@ -1,0 +1,511 @@
+// ------------------------------------
+//   #COLORS
+// ------------------------------------
+
+// Set up a colour palette which allows us to theme the entire project from one
+// location.
+
+// Primary brand colour.
+$color-brand-purple: #371376;
+$color-brand-purple-tint-10: #4b2a83;
+$color-brand-purple-tint-20: #5f4291;
+$color-brand-purple-tint-30: #73599f;
+$color-brand-purple-tint-40: #8771ac;
+$color-brand-purple-tint-50: #9b89ba;
+$color-brand-purple-tint-60: #afa0c8;
+$color-brand-purple-tint-70: #c3b8d5;
+$color-brand-purple-tint-80: #d7cfe3;
+$color-brand-purple-tint-90: #ebe7f1;
+$color-brand-purple-shade-10: #31116a;
+$color-brand-purple-shade-20: #2c0f5e;
+$color-brand-purple-shade-30: #260d52;
+$color-brand-purple-shade-40: #210b46;
+$color-brand-purple-shade-50: #1b093b;
+$color-brand-purple-shade-60: #16072f;
+$color-brand-purple-shade-70: #100523;
+$color-brand-purple-shade-80: #0a0317;
+$color-brand-purple-shade-90: #05010b;
+$color-brand-purple-shade-95: #F5F3F8;
+
+// Primary brand colour repointed.
+$color-brand-primary: $color-brand-purple;
+$color-brand-primary-highlight: $color-brand-purple-tint-20;
+$color-brand-primary-shadow: $color-brand-purple-shade-20;
+
+// Secondary brand colour.
+$color-brand-red: #C8194B;
+$color-brand-red-tint-10: #cd2f5d;
+$color-brand-red-tint-20: #d3476f;
+$color-brand-red-tint-30: #d85e81;
+$color-brand-red-tint-40: #de7593;
+$color-brand-red-tint-50: #e38ca5;
+$color-brand-red-tint-60: #e9a3b7;
+$color-brand-red-tint-70: #eebac9;
+$color-brand-red-tint-80: #f4d1db;
+$color-brand-red-tint-90: #f9e8ed;
+$color-brand-red-shade-10: #b41643;
+$color-brand-red-shade-20: #a0143c;
+$color-brand-red-shade-30: #8c1134;
+$color-brand-red-shade-40: #780f2d;
+$color-brand-red-shade-50: #640c25;
+$color-brand-red-shade-60: #500a1e;
+$color-brand-red-shade-70: #3c0716;
+$color-brand-red-shade-80: #0a0317;
+$color-brand-red-shade-90: #27040e;
+$color-brand-red-shade-95: #130207;
+
+// Secondary brand colour repointed.
+$color-brand-red-light: $color-brand-red-tint-90;
+
+// Tertiary brand colours.
+$color-brand-sky: #6bc4e8;
+$color-brand-sky-tint-10: #79c9ea;
+$color-brand-sky-tint-20: #88cfec;
+$color-brand-sky-tint-30: #97d5ee;
+$color-brand-sky-tint-40: #a6dbf1;
+$color-brand-sky-tint-50: #b5e1f3;
+$color-brand-sky-tint-60: #c3e7f5;
+$color-brand-sky-tint-70: #d2edf8;
+$color-brand-sky-tint-80: #e1f3fa;
+$color-brand-sky-tint-90: #f0f9fc;
+$color-brand-sky-shade-10: #60b0d0;
+$color-brand-sky-shade-20: #559cb9;
+$color-brand-sky-shade-30: #4a89a2;
+$color-brand-sky-shade-40: #40758b;
+$color-brand-sky-shade-50: #356274;
+$color-brand-sky-shade-60: #2a4e5c;
+$color-brand-sky-shade-70: #203a45;
+$color-brand-sky-shade-80: #15272e;
+$color-brand-sky-shade-90: #0a1317;
+
+$color-brand-orange: #ffb600;
+$color-brand-orange-tint-10: #ffbd19;
+$color-brand-orange-tint-20: #ffc433;
+$color-brand-orange-tint-30: #ffcb4c;
+$color-brand-orange-tint-40: #ffd366;
+$color-brand-orange-tint-50: #ffda7f;
+$color-brand-orange-tint-60: #ffe199;
+$color-brand-orange-tint-70: #ffe9b2;
+$color-brand-orange-tint-80: #fff0cc;
+$color-brand-orange-tint-90: #fff7e5;
+$color-brand-orange-shade-10: #e5a300;
+$color-brand-orange-shade-20: #cc9100;
+$color-brand-orange-shade-30: #b27f00;
+$color-brand-orange-shade-40: #996d00;
+$color-brand-orange-shade-50: #7f5b00;
+$color-brand-orange-shade-60: #664800;
+$color-brand-orange-shade-70: #4c3600;
+$color-brand-orange-shade-80: #322400;
+$color-brand-orange-shade-90: #191200;
+
+$color-brand-turquoise: #19D3C5;
+$color-brand-turquoise-tint-10: #2fd7ca;
+$color-brand-turquoise-tint-20: #47dbd0;
+$color-brand-turquoise-tint-30: #5ee0d6;
+$color-brand-turquoise-tint-40: #75e4dc;
+$color-brand-turquoise-tint-50: #8ce9e2;
+$color-brand-turquoise-tint-60: #a3ede7;
+$color-brand-turquoise-tint-70: #baf1ed;
+$color-brand-turquoise-tint-80: #d1f6f3;
+$color-brand-turquoise-tint-90: #e8faf9;
+$color-brand-turquoise-shade-10: #16bdb1;
+$color-brand-turquoise-shade-20: #14a89d;
+$color-brand-turquoise-shade-30: #119389;
+$color-brand-turquoise-shade-40: #0f7e76;
+$color-brand-turquoise-shade-50: #0c6962;
+$color-brand-turquoise-shade-60: #0a544e;
+$color-brand-turquoise-shade-70: #073f3b;
+$color-brand-turquoise-shade-80: #042a27;
+$color-brand-turquoise-shade-90: #021513;
+
+$color-brand-pink: #f2a8dc;
+$color-brand-pink-tint-10: #f3b0df;
+$color-brand-pink-tint-20: #f4b9e3;
+$color-brand-pink-tint-30: #f5c2e6;
+$color-brand-pink-tint-40: #f7caea;
+$color-brand-pink-tint-50: #f8d3ed;
+$color-brand-pink-tint-60: #f9dcf1;
+$color-brand-pink-tint-70: #fbe4f4;
+$color-brand-pink-tint-80: #fcedf8;
+$color-brand-pink-tint-90: #fdf6fb;
+$color-brand-pink-shade-10: #d997c6;
+$color-brand-pink-shade-20: #c186b0;
+$color-brand-pink-shade-30: #a9759a;
+$color-brand-pink-shade-40: #916484;
+$color-brand-pink-shade-50: #79546e;
+$color-brand-pink-shade-60: #604358;
+$color-brand-pink-shade-70: #483242;
+$color-brand-pink-shade-80: #30212b;
+$color-brand-pink-shade-90: #181015;
+
+$color-brand-green: #89dc65;
+$color-brand-green-tint-10: #94df74;
+$color-brand-green-tint-20: #a0e383;
+$color-brand-green-tint-30: #ace693;
+$color-brand-green-tint-40: #b8eaa2;
+$color-brand-green-tint-50: #c4edb2;
+$color-brand-green-tint-60: #cff1c1;
+$color-brand-green-tint-70: #dbf4d0;
+$color-brand-green-tint-80: #e7f8e0;
+$color-brand-green-tint-90: #f3fbef;
+$color-brand-green-shade-10: #7bc65a;
+$color-brand-green-shade-20: #6db050;
+$color-brand-green-shade-30: #5f9a46;
+$color-brand-green-shade-40: #52843c;
+$color-brand-green-shade-50: #446e32;
+$color-brand-green-shade-60: #365828;
+$color-brand-green-shade-70: #29421e;
+$color-brand-green-shade-80: #1b2b14;
+$color-brand-green-shade-90: #0d150a;
+
+$color-brand-violet: #C5B4E2;
+$color-brand-violet-tint-10: #cabbe4;
+$color-brand-violet-tint-20: #d0c3e7;
+$color-brand-violet-tint-30: #d6caea;
+$color-brand-violet-tint-40: #dcd2ed;
+$color-brand-violet-tint-50: #e2d9f0;
+$color-brand-violet-tint-60: #e7e1f3;
+$color-brand-violet-tint-70: #ede8f6;
+$color-brand-violet-tint-80: #f3f0f9;
+$color-brand-violet-tint-90: #f9f7fc;
+$color-brand-violet-shade-10: #b1a2cb;
+$color-brand-violet-shade-20: #9d90b4;
+$color-brand-violet-shade-30: #897d9e;
+$color-brand-violet-shade-40: #766c87;
+$color-brand-violet-shade-50: #625a71;
+$color-brand-violet-shade-60: #4e485a;
+$color-brand-violet-shade-70: #3b3643;
+$color-brand-violet-shade-80: #27232d;
+$color-brand-violet-shade-90: #131116;
+
+$color-brand-yellow: #f3e500;
+$color-brand-yellow-tint-10: #f4e719;
+$color-brand-yellow-tint-20: #f5ea33;
+$color-brand-yellow-tint-30: #f6ec4c;
+$color-brand-yellow-tint-40: #f7ef66;
+$color-brand-yellow-tint-50: #f9f27f;
+$color-brand-yellow-tint-60: #faf499;
+$color-brand-yellow-tint-70: #fbf7b2;
+$color-brand-yellow-tint-80: #fcf9cc;
+$color-brand-yellow-tint-90: #fdfce5;
+$color-brand-yellow-shade-10: #dace00;
+$color-brand-yellow-shade-20: #c2b700;
+$color-brand-yellow-shade-30: #aaa000;
+$color-brand-yellow-shade-40: #918900;
+$color-brand-yellow-shade-50: #797200;
+$color-brand-yellow-shade-60: #615b00;
+$color-brand-yellow-shade-70: #484400;
+$color-brand-yellow-shade-80: #302d00;
+$color-brand-yellow-shade-90: #181600;
+
+$color-brand-salmon: #FFA489;
+$color-brand-salmon-tint-10: #ffad94;
+$color-brand-salmon-tint-20: #ffb6a0;
+$color-brand-salmon-tint-30: #ffbfac;
+$color-brand-salmon-tint-40: #ffc8b8;
+$color-brand-salmon-tint-50: #ffd1c4;
+$color-brand-salmon-tint-60: #ffdacf;
+$color-brand-salmon-tint-70: #ffe3db;
+$color-brand-salmon-tint-80: #ffece7;
+$color-brand-salmon-tint-90: #fff5f3;
+$color-brand-salmon-shade-10: #e5937b;
+$color-brand-salmon-shade-20: #cc836d;
+$color-brand-salmon-shade-30: #b2725f;
+$color-brand-salmon-shade-40: #996252;
+$color-brand-salmon-shade-50: #7f5244;
+$color-brand-salmon-shade-60: #664136;
+$color-brand-salmon-shade-70: #4c3129;
+$color-brand-salmon-shade-80: #32201b;
+$color-brand-salmon-shade-90: #19100d;
+
+//Tertiary brand colours repointed.
+$color-brand-brick: $color-brand-salmon; //Brick has been mapped to Salmon
+
+$color-brand-teal: $color-brand-sky; //Teal has been mapped to Sky blue
+$color-brand-teal-dark: $color-brand-sky-shade-20;
+
+$color-brand-blue: $color-brand-sky;
+$color-brand-blue-dark: $color-brand-sky-shade-20;
+$color-brand-blue-light:$color-brand-sky-tint-80;
+$color-brand-orange-dark: $color-brand-orange-shade-20;
+$color-brand-turquoise-dark: $color-brand-turquoise-shade-20;
+$color-brand-pink-dark: $color-brand-pink-shade-20;
+$color-brand-green-dark: $color-brand-green-shade-20;
+$color-brand-violet-dark: $color-brand-violet-shade-20;
+$color-brand-yellow-dark: $color-brand-yellow-shade-20;
+$color-brand-brick-dark: $color-brand-salmon-shade-20;
+
+// Interface colours.
+$color-interface-blue: #1847BF;
+$color-interface-blue-tint-10: #2f59c5;
+$color-interface-blue-tint-20: #466bcb;
+$color-interface-blue-tint-30: #5d7ed2;
+$color-interface-blue-tint-40: #7490d8;
+$color-interface-blue-tint-50: #8ba3df;
+$color-interface-blue-tint-60: #a2b5e5;
+$color-interface-blue-tint-70: #b9c7eb;
+$color-interface-blue-tint-80: #d0daf2;
+$color-interface-blue-tint-90: #e7ecf8;
+$color-interface-blue-shade-10: #153fab;
+$color-interface-blue-shade-20: #133898;
+$color-interface-blue-shade-30: #103185;
+$color-interface-blue-shade-40: #0e2a72;
+$color-interface-blue-shade-50: #0c235f;
+$color-interface-blue-shade-60: #091c4c;
+$color-interface-blue-shade-70: #071539;
+$color-interface-blue-shade-80: #040e26;
+$color-interface-blue-shade-90: #020713;
+
+$color-interface-grey: #2B2438;
+$color-interface-grey-tint-10: #40394b;
+$color-interface-grey-tint-20: #554f5f;
+$color-interface-grey-tint-30: #6a6573;
+$color-interface-grey-tint-40: #7f7b87;
+$color-interface-grey-tint-50: #95919b;
+$color-interface-grey-tint-60: #aaa7af;
+$color-interface-grey-tint-70: #bfbdc3;
+$color-interface-grey-tint-80: #d4d3d7;
+$color-interface-grey-tint-90: #e9e9eb;
+$color-interface-grey-tint-95: #f4f4f5;
+$color-interface-grey-tint-98: #fdfdfd;
+$color-interface-white: #ffffff;
+$color-interface-grey-shade-10: #262032;
+$color-interface-grey-shade-20: #221c2c;
+$color-interface-grey-shade-30: #1e1927;
+$color-interface-grey-shade-40: #191521;
+$color-interface-grey-shade-50: #15121c;
+$color-interface-grey-shade-60: #110e16;
+$color-interface-grey-shade-70: #0c0a10;
+$color-interface-grey-shade-80: #08070b;
+$color-interface-grey-shade-90: #040305;
+$color-interface-black: #000000;
+
+$color-interface-error: #cb1730;
+$color-interface-error-tint-10: #d02e44;
+$color-interface-error-tint-20: #d54559;
+$color-interface-error-tint-30: #da5c6e;
+$color-interface-error-tint-40: #df7382;
+$color-interface-error-tint-50: #e58b97;
+$color-interface-error-tint-60: #eaa2ac;
+$color-interface-error-tint-70: #efb9c0;
+$color-interface-error-tint-80: #f4d0d5;
+$color-interface-error-tint-90: #f9e7ea;
+$color-interface-error-tint-95: #fcf3f5;
+$color-interface-error-shade-10: #b6142b;
+$color-interface-error-shade-20: #a21226;
+$color-interface-error-shade-30: #8e1021;
+$color-interface-error-shade-40: #790d1c;
+$color-interface-error-shade-50: #650b18;
+$color-interface-error-shade-60: #510913;
+$color-interface-error-shade-70: #3c060e;
+$color-interface-error-shade-80: #280409;
+$color-interface-error-shade-90: #140204;
+
+$color-interface-warning: #DC7D28;
+$color-interface-warning-tint-10: #df8a3d;
+$color-interface-warning-tint-20: #e39753;
+$color-interface-warning-tints-30: #e6a468;
+$color-interface-warning-tint-40: #eab17e;
+$color-interface-warning-tint-50: #edbe93;
+$color-interface-warning-tint-60: #f1cba9;
+$color-interface-warning-tint-70: #f4d8be;
+$color-interface-warning-tint-80: #f8e5d4;
+$color-interface-warning-tint-90: #fbf2e9;
+$color-interface-warning-tint-95: #fdf8f4;
+$color-interface-warning-shade-10: #c67024;
+$color-interface-warning-shade-20: #b06420;
+$color-interface-warning-shade-30: #9a571c;
+$color-interface-warning-shade-40: #844b18;
+$color-interface-warning-shade-50: #6e3e14;
+$color-interface-warning-shade-60: #583210;
+$color-interface-warning-shade-70: #42250c;
+$color-interface-warning-shade-80: #2b1807;
+$color-interface-warning-shade-90: #150c03;
+
+$color-interface-success: #4B9646;
+$color-interface-success-tint-10: #5da058;
+$color-interface-success-tint-20: #6fab6b;
+$color-interface-success-tint-30: #81b57d;
+$color-interface-success-tint-40: #93c090;
+$color-interface-success-tint-50: #a5caa2;
+$color-interface-success-tint-60: #b7d5b5;
+$color-interface-success-tint-70: #c9dfc7;
+$color-interface-success-tint-80: #dbeada;
+$color-interface-success-tint-90: #edf4ec;
+$color-interface-success-tint-95: #f6faf6;
+$color-interface-success-shade-10: #43873f;
+$color-interface-success-shade-20: #3c7838;
+$color-interface-success-shade-30: #346931;
+$color-interface-success-shade-40: #2d5a2a;
+$color-interface-success-shade-50: #254b23;
+$color-interface-success-shade-60: #1e3c1c;
+$color-interface-success-shade-70: #162d15;
+$color-interface-success-shade-80: #0e1d0d;
+$color-interface-success-shade-90: #070e06;
+
+// Interface colours repointed.
+$color-brand-secondary: $color-interface-blue; //Secondary blue has been mapped to interface blue
+$color-brand-secondary-highlight: $color-interface-blue-tint-20;
+$color-brand-secondary-shadow: $color-interface-blue-shade-20;
+
+$color-grey-lightest: $color-interface-grey-tint-95;
+$color-grey-lightest-shadow: darken(#f8f8f8,  3%); //Used for specification card cover art
+
+$color-blue-lightest: $color-interface-blue-tint-90;
+
+$color-ui: #e4e4e4;
+
+$color-grey: $color-interface-grey-tint-80;
+$color-grey-dark: $color-interface-grey-tint-30;
+$color-grey-light: $color-interface-grey-tint-90;
+$color-grey-black: $color-interface-grey;
+
+
+// Component-specific opperators
+$color-border-default: $color-interface-grey-tint-80;
+$color-scroll: #888;
+$color-scroll-background: #f0f0f0;
+
+
+$color-page-text: $color-interface-grey;
+$color-page-background: $color-interface-white;
+
+$color-forms-notification-error-major: $color-interface-error;
+$color-forms-input-is-active: #005e91; //
+$color-forms-notification-success: #4b9646; //
+$color-forms-radio-check: $color-interface-blue;
+$color-forms-radio-check-outline: #c0c0c0; //
+$color-forms-input-is-inactive: #bbb; //
+$color-forms-input-read-only: $color-interface-grey; 
+$color-forms-input-select-textarea: #333; //
+$color-forms-input-select-background: #fff; //
+
+$color-links: inherit;
+$color-links-content: $color-interface-blue;
+$color-links-content-hover: $color-interface-blue-shade-40;
+$color-links-content-pressed: $color-interface-blue-shade-60; //Added pressed state
+
+$color-page-foot: $color-interface-grey;
+$color-page-foot-background: $color-grey-lightest;
+
+$color-btn-primary: $color-interface-white;
+$color-btn-primary-background: $color-interface-blue;
+$color-btn-primary-background-hover: $color-interface-blue-shade-40;
+$color-btn-primary-background-pressed: $color-interface-blue-shade-60; //Added pressed state
+
+$color-btn-secondary: $color-interface-white;
+$color-btn-secondary-background: $color-interface-grey-tint-40;
+$color-btn-secondary-background-hover: $color-interface-grey-tint-20;
+$color-btn-secondary-background-pressed: $color-interface-grey; //Added pressed state
+
+$color-btn-success: $color-interface-white;
+$color-btn-success-background: $color-interface-success;
+$color-btn-success-background-hover: $color-interface-success-shade-40;
+$color-btn-success-background-pressed: $color-interface-success-shade-60; //Added pressed state
+
+$color-btn-brand: $color-interface-white;
+$color-btn-brand-background: $color-brand-purple;
+$color-btn-brand-background-hover: $color-brand-purple-shade-40;
+$color-btn-brand-background-pressed: $color-brand-purple-shade-60; //Added pressed state
+
+$color-btn-alert: $color-interface-white;
+$color-btn-alert-background: $color-interface-error;
+$color-btn-alert-background-hover: $color-interface-error-shade-40;
+$color-btn-alert-background-pressed: $color-interface-error-shade-60; //Added pressed state
+
+$color-btn-disabled: $color-interface-white;
+$color-btn-disabled-background: $color-interface-grey-tint-80;
+$color-btn-disabled-background-hover: $color-interface-grey-tint-80;
+
+$color-btn-reset: $color-interface-grey;
+$color-btn-reset-background: $color-interface-success-tint-90;
+$color-btn-reset-background-hover: $color-interface-success-tint-60;
+$color-btn-reset-background-pressed: $color-interface-success-tint-40; //Added pressed state
+
+$color-btn-facebook: $color-interface-white;
+$color-btn-facebook-background: #3b5998;
+$color-btn-facebook-background-hover: darken($color-btn-facebook-background,  10%);
+$color-btn-facebook-background-pressed: darken($color-btn-facebook-background,  20%); //Added pressed state
+
+$color-btn-twitter: $color-interface-white;
+$color-btn-twitter-background: #222222;
+$color-btn-twitter-background-hover: darken($color-btn-twitter-background,  10%);
+$color-btn-twitter-background-pressed: darken($color-btn-twitter-background,  20%); //Added pressed state
+
+$color-btn-email: $color-interface-white;
+$color-btn-email-background: #8964CC;
+$color-btn-email-background-hover: darken($color-btn-email-background,  10%);
+$color-btn-email-background-pressed: darken($color-btn-email-background,  20%); //Added pressed state
+
+$color-btn-whatsapp: $color-interface-white;
+$color-btn-whatsapp-background: #25d366;
+$color-btn-whatsapp-background-hover: darken($color-btn-whatsapp-background,  10%);
+$color-btn-whatsapp-background-pressed: darken($color-btn-whatsapp-background,  20%); //Added pressed state
+
+$color-table-tr-background-even: $color-interface-blue-tint-90;
+$color-table-tr-border: $color-interface-grey-tint-80;
+$color-table-th: $color-interface-white;
+$color-table-td-rwd-header: $color-table-th;
+$color-table-td-rwd-background: $color-interface-blue;
+$color-table-th-sort-icon: $color-interface-blue;
+
+$color-nav-background-hover: #DDE9F7; //
+$color-nav-border-bottom: #5d4190; //
+
+$color-pagination-list-item-link: $color-interface-blue;
+$color-pagination-list-item-link-hover: $color-interface-white;
+$color-pagination-list-item-link-bg-hover: $color-interface-blue;
+
+$color-pagination-list-item-link-active-bg: $color-interface-blue;
+$color-pagination-list-item-link-active: $color-interface-white;
+
+$color-scrollbar-search-border: #d9d9d9; //
+$color-accordion-popup: $color-interface-white;
+$color-accordion-close: $color-page-text;
+$color-accordion-close-box: $color-interface-grey-tint-80; 
+$color-accordion-title-border: $color-interface-grey-tint-80; 
+
+$color-search-filter-bg: $color-grey-lightest;
+$color-search-btn: $color-brand-primary;
+
+$color-results-content-breadcrumb: #196600; //
+$color-results-content-confirm: #bb2e59; //
+$color-results-content--link: #2C71AC; //
+$color-results-content--title: #2B70AC; //
+
+$color-notification-success: $color-interface-success-tint-80;
+$color-notification-important: $color-interface-blue-tint-80;
+$color-notification-warning: $color-interface-warning-tint-80;
+$color-notification-danger: $color-interface-error-tint-80;
+
+$color-notification-border-success: $color-interface-success;
+$color-notification-border-important: $color-interface-blue;
+$color-notification-border-warning: $color-interface-warning;
+$color-notification-border-danger: $color-interface-error;
+
+$color-overlay: rgba(0,0,0,0.6); //
+
+$color-tooltip-text: $color-interface-white;
+$color-tooltip-background: $color-interface-blue;
+
+$color-tabs-border: #598dbc; //
+$color-nav-tabs-border: $color-grey; //
+$color-nav-tabs:$color-grey-black; //
+$color-nav-tabs-background:$color-interface-white;
+$color-nav-tabs--hocus: $color-interface-white;
+
+$color-disabled: $color-interface-grey-tint-80;
+
+$color-campaign-blue: $color-brand-sky;
+
+$color-mobile-nav-background: $color-interface-grey-tint-95;
+$color-mobile-nav-link-navigate-text: $color-interface-grey;
+$color-mobile-nav-link-traverse-text: $color-interface-grey;
+$color-mobile-nav-link-back-background: $color-interface-grey-tint-95;
+$color-mobile-nav-link-back-text: $color-interface-blue;
+$color-mobile-nav-item-border: $color-interface-grey-tint-80;
+$color-mobile-nav-item-background: $color-interface-grey-tint-98;
+$color-mobile-nav-item-background--clicked: $color-interface-blue-tint-90;
+$color-mobile-nav-item-text--clicked: $color-interface-blue;
+$color-mobile-nav-item-background--current: $color-brand-purple; //
+$color-mobile-nav-item-text--current: $color-interface-white; //

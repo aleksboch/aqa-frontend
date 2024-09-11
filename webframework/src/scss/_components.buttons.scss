@@ -1,0 +1,277 @@
+// ------------------------------------
+//   #BUTTONS
+//   styles
+// ------------------------------------
+.c-btn {
+    // background-color: transparent;
+    border: none;
+    border-radius: $base-radius;
+    padding: .5rem 1rem;
+    // transition: $base-transition;
+    // display: block;
+    display: inline-block;
+    width: auto;
+    margin: 1rem 0.3rem;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;    
+
+    @include breakpoint($media-screen-only, $media-mobile-from, $media-mobile-to) {
+        display: inline-block;
+        margin: 1rem 0;
+    }
+
+    @include hocus {
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: none;
+        border: none;
+        outline: 0;
+    }
+
+    &--nomargin {
+        margin: 0;
+    }
+
+    &--nopadding {
+        padding: 0;
+    }
+
+    &--primary {
+        background-color: $color-btn-primary-background;
+        color: $color-btn-primary;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-primary-background-hover;
+        }
+    }
+
+    &--secondary {
+        background-color: $color-btn-secondary-background;
+        color: $color-btn-secondary;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-secondary-background-hover;
+        }
+    }
+
+    &--brand {
+        background-color: $color-btn-brand-background;
+        color: $color-btn-brand;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-brand-background-hover;
+        }
+    }
+
+    &--success {
+        background-color: $color-btn-success-background;
+        color: $color-btn-success;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-success-background-hover;
+        }
+    }
+
+    &--alert {
+        background-color: $color-btn-alert-background;
+        color: $color-btn-alert;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-alert-background-hover;
+        }
+    }
+
+    &--disabled {
+        background-color: $color-btn-disabled-background;
+        color: $color-btn-disabled;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-disabled-background-hover;
+            cursor: default;
+        }
+    }
+
+    &--reset {
+        background-color: $color-btn-reset-background;
+        color: $color-btn-reset;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-reset-background-hover;
+           
+        }
+    }
+
+    // Social buttons
+
+    &--facebook {
+        background-color: $color-btn-facebook-background;
+        color: $color-btn-facebook;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-facebook-background-hover;
+        }       
+    }
+
+    &--twitter {
+        background-color: $color-btn-twitter-background;
+        color: $color-btn-twitter;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-twitter-background-hover;
+        }       
+    }
+    
+    &--email {
+        background-color: $color-btn-email-background;
+        color: $color-btn-email;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-email-background-hover;
+        }       
+    }
+    
+    &--whatsapp {
+        background-color: $color-btn-whatsapp-background;
+        color: $color-btn-whatsapp;
+        border: none;
+
+        @include hocus {
+            background-color: $color-btn-whatsapp-background-hover;
+        }       
+    }    
+    
+    &--download {
+        background-color: $color-grey-lightest;
+        color: $color-brand-secondary;
+        border: none;
+
+        @include hocus {
+            background-color: $color-blue-lightest;
+        }          
+    }
+
+    // c-icon c-icon--right c-icon__right-arrow--white
+    &--feature {
+        width: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-size: $icon-size auto;         
+        background-color: $color-page-background;
+        background-position: center right .25rem;
+        padding-right: $icon-size + .5rem;
+        color: $color-page-text;
+        border: 1px solid $color-grey;
+        background-image: url(#{$img-path}/#{$icon-right-arrow-grey});
+
+        @include hocus {
+            background-color: $color-brand-primary;
+            color: $color-page-background;
+            border: 1px solid $color-brand-primary;
+            background-image: url(#{$img-path}/#{$icon-right-arrow-white});
+        }
+
+    }
+
+    //&--small { 
+    //    padding: .5rem 1rem;
+    //}
+
+    &--large {
+        padding: 1rem 1rem;
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--tight {
+        margin: 0 0 .5rem 0;
+    }
+
+    &--sq {
+        //display: inline;
+        font-size: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+
+        &-large {
+            font-size: 0;
+            height: 3rem;
+            width: 3.5rem;
+        }
+        &-medium{
+            font-size: 0;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+	@include breakpoint ($screen-only, $mobile-to) {
+		html.rwd & {
+			&--sm-full {
+				width: 100%;
+			}
+			
+		}
+	}    
+
+    &--back-to-top {
+        background-color: $color-brand-orange;
+        background-image: url(#{$img-path}/#{$icon-up-arrow-white});
+        background-size: 2rem auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: $color-btn-disabled;
+        cursor: pointer;
+        border: none;
+        width:2.5rem;
+        height: 2.5rem;
+        position: fixed;
+        bottom: 1.25rem;
+        right: 1.25rem;
+
+        @include hocus {
+            background-color: $color-brand-orange-shade-40;
+            cursor: pointer;
+        }
+    }
+    &--filter-search {
+        border:0.0625rem $color-grey solid;
+        cursor: pointer;
+        color: $color-forms-input-select-textarea;
+        @include hocus {
+            color: $color-forms-input-select-textarea;
+            cursor: pointer;
+            border:0.0625rem $color-grey solid;
+        }
+    }
+
+    // for use with panels with images and a btn in the panel footer
+    // to go full width with no margin
+    &--cta {
+        margin: 0;
+        width: 100%;
+    }
+
+    &--rnd-crn {
+        border-radius: 20px;
+    }
+    &--circle {
+        border-radius: 50%;
+    }
+   
+
+}
+
+//End of Buttons styling

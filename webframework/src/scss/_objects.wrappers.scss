@@ -1,0 +1,170 @@
+//------------------------------------*\
+//  #WRAPPERS
+//------------------------------------*/
+
+.o-page { // previously .page 
+    @include clearfix();
+    width: $width-desktop;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    //overflow-x: hidden;
+
+    html.rwd & {
+        //Tablet only start
+        @include breakpoint($media-screen-only, $media-mobile-from, $media-tablet-to) {
+            width: $width-max-width;
+        }
+        //Tablet only end
+
+        //Desktop only start
+        @include breakpoint($media-screen-only, $media-desktop-from, $media-desktop-to) {
+            width: $width-desktop;
+        }
+        //Desktop only end
+
+        //Large desktop only start
+        @include breakpoint($media-screen-only, $media-desktop-large-from) {
+            width: $width-large-desktop;
+        }
+        //Large desktop only end       
+    }
+}
+
+
+html.rwd {
+    @include breakpoint($screen-only, $tablet-from) {
+        .content-wrapper { //needs renaming
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+}
+
+.o-fullwidth { // previously .fullwidth 
+  width: $width-max-width;
+    .o-content {
+        .row {
+            margin-right: 0;
+        }
+    }
+}
+
+.o-branded {
+    width: auto;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: $color-brand-purple-tint-90;
+    z-index:1;
+
+    // @include breakpoint($screen-only, $mobile-to) {
+    //     html.rwd & {
+    //         padding: 0;
+    //     }
+    // }      
+
+    &--fullwidth {
+        width: $width-max-width;
+    }
+
+    &--grey {
+        background-color: $color-grey-lightest;
+    }
+    
+}
+
+// @include breakpoint($screen-only, $mobile-to) {
+//     .o-branded {
+//         width: auto;
+//         padding-top: 0;
+//         padding-bottom: 0;
+//         background-color: $color-brand-blue-light;
+    
+//         &--fullwidth {
+//             width: $width-max-width;
+//             padding: 0;
+//         }
+//     }
+// }
+
+// @include breakpoint($screen-only, $tablet-to) {
+//     .o-branded {
+//         width: auto;
+//         padding-top: 0;
+//         padding-bottom: 0;
+//         background-color: $color-brand-blue-light;
+    
+//         &--fullwidth {
+//             width: $width-max-width;
+//             padding:1rem;
+//         }
+//     }
+// }
+
+@include breakpoint($screen-only, $mobile-to ) {
+//placeholder for overlay
+%o-overlay {
+    background-color: $color-overlay;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    //opacity:0;
+    position: fixed;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    visibility: hidden;
+    z-index: 2;
+}
+
+%o-overlay-is-active {
+    //opacity: .6;
+    visibility: visible;
+}
+
+
+    .o-overlay {
+        @extend %o-overlay;
+        
+        &.is-active {
+            @extend %o-overlay-is-active;
+        }
+    }
+}
+
+.o-scroll{
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+   
+    &--horizontal{
+        overflow-x: auto;
+        overflow-y: hidden;
+        @include breakpoint($screen-only, $mobile-to ) {
+            & table th, & table td {
+                min-width: 20em;
+            }
+        }
+
+    }    
+    &::-webkit-scrollbar {
+        height: 6px
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: $color-scroll-background;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-scroll;
+    }
+    
+    &::-webkit-scrollbar-button {display:none}
+
+
+}
+
+

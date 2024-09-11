@@ -1,0 +1,49 @@
+// ------------------------------------*\
+//   #TABLES
+// \*------------------------------------
+// 
+// when using o-scroll option overrides for mobile viewports apply see _objects.wrappers 
+table{
+    th {
+        background-color: $color-brand-secondary;
+        color: $color-table-th;
+        padding: .5rem .9rem .5rem .9rem;
+        text-align: left;
+        border-right: .0625rem solid $color-page-background;
+        font-weight: 400;
+        font-size: 1rem;
+        &:last-child {
+            border-right: .0625rem solid $color-brand-secondary;
+        }
+    }
+    td {
+        width:auto;
+        @include font-family(default);
+        @include font-size(1rem);
+        padding: .5rem .9rem .5rem .9rem;
+        border-right: .0625rem solid $color-table-tr-border;
+        border-left: .0625rem solid $color-table-tr-border;
+        color: $color-forms-input-select-textarea;
+        &--name-capitialize::first-letter {
+            text-transform: capitalize;
+        }
+    }
+    tr {
+        &:nth-child(even) {
+            background-color: $color-table-tr-background-even;
+        }
+        &:nth-child(odd) {
+            background-color: $color-page-background;
+        }
+        &:last-child {
+            border-bottom: .0625rem solid $color-grey-light;
+        }
+    }
+    tfoot {
+        > tr {
+            &:last-child, > td {
+                border: none;
+              }
+        }
+    }
+}

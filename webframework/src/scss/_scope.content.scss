@@ -1,0 +1,236 @@
+//------------------------------------*\
+//  #CONTENT
+//------------------------------------*/
+
+//technically should be .s-content
+.s-content {
+    padding: 0 1rem;
+    width: $width-max-width;
+    -ms-flex: 0 1 auto; // hack for IE display issues *
+    min-width: 12em; // hack for tablesaw
+    -webkit-box-flex: 1;
+
+    // Set continuous content in nice, large open sans.
+    @include font-family(default);
+    @include font-size(1rem);
+
+    a:not(.c-pagination__list__item__link):not(.c-btn):not(.btn):not(.c-breadcrumbs__ordered-list__item__link):not(.c-accordion__title):not(.c-tabs__nav__list__item__link):not(.c-tabs__nav__list__menu):not(.c-tabs__nav__list__item__link):not(.c-tabs__nav__menu):not(.c-dropdown__list__item__link):not(.c-scroll-list__item__link):not(.c-link__list__item__link):not(.c-form__label-checkbox){ //SHAME
+        color: $color-links-content;
+        //text-decoration: none;
+        @include font-weight(normal);
+
+        @include hocus() {
+            color: $color-links-content-hover;
+            //text-decoration: underline;
+        }
+
+        &:active {
+            background-color: $color-brand-primary;
+            color: $color-page-background;
+        }
+
+    }
+
+    hr {
+        border: 0;
+        height: 0;
+        border-bottom: $color-grey solid 1px;
+        margin: 2rem 0;
+    }
+
+    // Indent list elements enough that their bullets are not leaking out of
+    // their container.
+    ul:not(.o-list-bare):not(.c-tabs__menu):not(.select2-selection__rendered):not(.c-tabs__nav__list--primary):not(.c-tabs__nav__list--secondary):not(.c-dropdown__list):not(.c-scroll-list):not(.c-link__list):not(.o-list-inline),
+    ol:not(.o-list-bare) {
+        list-style-position: outside;
+        padding-left: 1.2rem;
+        ul, ol {
+            margin-left: $spacing-unit * 1.5;
+            padding-left: 0;
+        }
+    }
+
+    dl:not(.c-accordion) {
+        margin: 0 0 1rem 0;
+        dt {
+            font-weight: 700;
+            .c-accordion__title.is-expanded {
+                border-bottom: 0;
+            }
+        }
+        dd.c-accordion__item {
+            //padding-top: .8em;
+            &.is-expanded {
+                border-bottom: .0625rem solid $color-accordion-title-border;
+            }
+        }
+        dd:not(.c-accordion__item) {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+    }
+
+    blockquote {
+        //text-indent: -0.42em;
+        position: relative;
+        margin: 0;
+        padding: 0rem 1.6rem;
+        font-size: 1rem;
+        color: $color-brand-primary;
+        line-height: 1.3rem;
+        text-align: left;
+        &::before {
+            content: "\201C"; /*Unicode for Left Double Quote*/
+            @include font-family(default);
+            @include font-weight(bold);
+            font-size: 3rem;
+            font-weight: bold;
+            color: $color-brand-primary;
+            position: absolute;
+            left: 0rem;
+            top: .5rem;
+        }
+
+        &::after {
+            content: "";
+        }
+
+    }
+
+    q {
+        color: $color-grey-black;
+        font-style: italic;
+        quotes: "‘" "’";
+        @include font-family(default);
+        @include font-weight(bold);
+        
+        &:before, &:after {
+            content: '"';
+        }
+    }
+
+    cite {
+        font-style: normal;
+        font-size: 1rem;
+        text-align: left;
+        display: block;
+        padding-top: .5rem;
+        margin-bottom: 1rem;
+        color: $color-grey-dark;
+    }
+
+    caption {
+        text-align: left;
+        font-style: italic;
+        margin: 0 0 1rem 0;
+    }
+
+    /* Code Styles */
+    pre {
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+    code {
+        display: block;
+        padding: .5rem 1rem;
+        font-family: Courier, 'New Courier', monospace;
+        font-size: .8rem;
+        border-radius: 3px;
+        background-color: #f1f1f1;
+        color: $color-grey-black;
+        margin-bottom: 1rem;
+       
+        &.inline-code { // to display code inline
+            display: inline;
+            padding: 0 .5rem;
+            margin-bottom: 0;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+
+        & th,
+        & td {
+            text-align: left;
+            vertical-align: top;
+        }
+
+        & th p:last-child,
+        & td p:last-child {
+            margin-bottom: 0;
+        }
+
+        td:first-child:nth-last-child(1) {
+            width: 100%;
+        }
+
+        td:first-child:nth-last-child(2),
+        td:first-child:nth-last-child(2) ~ td {
+            width: 50%;
+        }
+
+        td:first-child:nth-last-child(3),
+        td:first-child:nth-last-child(3) ~ td {
+            width: 33.3333%;
+        }
+
+        td:first-child:nth-last-child(4),
+        td:first-child:nth-last-child(4) ~ td {
+            width: 25%;
+        }        
+
+        td:first-child:nth-last-child(5),
+        td:first-child:nth-last-child(5) ~ td {
+            width: 20%;
+        }  
+
+        td:first-child:nth-last-child(6),
+        td:first-child:nth-last-child(6) ~ td {
+            width: 16.6666%;
+        }  
+
+        &.auto-width {
+            width: auto;
+            
+            & th,
+            & td,
+            td:first-child:nth-last-child(1), 
+            td:first-child:nth-last-child(2),
+            td:first-child:nth-last-child(2) ~ td,
+            td:first-child:nth-last-child(3),
+            td:first-child:nth-last-child(3) ~ td,
+            td:first-child:nth-last-child(4),
+            td:first-child:nth-last-child(4) ~ td,
+            td:first-child:nth-last-child(5),
+            td:first-child:nth-last-child(5) ~ td,    
+            td:first-child:nth-last-child(6),
+            td:first-child:nth-last-child(6) ~ td {
+                width: auto;
+            }
+        }
+    }
+
+    html.rwd & {
+        @include breakpoint($screen-only, $mobile-to) {
+            box-sizing: border-box;
+        }
+    }
+
+    .js-ani-img:hover,
+    .js-close-parent {
+        cursor: pointer;
+    }
+
+
+    // Discourage WYSIWYG users from applying their own styles.
+    //[style]:after {
+    //  content: " Please refrain from adding your own styling.";
+    //  color: red;
+    //}
+
+}

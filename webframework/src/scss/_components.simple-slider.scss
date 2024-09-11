@@ -1,0 +1,120 @@
+// ------------------------------------
+//   #Simple slider
+//   styles
+// ------------------------------------
+
+// .c-simple-slider {
+
+ 	// &-wrap {
+ 	// }
+
+// 	//hidden radio buttons
+// 	&__control {
+// 	}
+
+// 	&__control-btn {
+// 	}
+
+// 	&-item-wrap {
+// 	}
+
+// 	&__item {
+// 	}
+
+// }
+
+// CSS taken inspiration from
+// http://fofwebdesign.co.uk/freebies-for-websites/css/slider-rwd.htm
+
+// TO DO
+// Reformat 
+
+.c-simple-slider-wrap {
+	max-width: 90em;
+	position: relative;
+}
+
+.c-simple-slider {
+	display: block;
+	overflow: hidden;
+}
+
+.c-simple-slider-wrap .c-simple-slider__control {
+	position: absolute;
+	left: -9999px
+}
+
+.c-simple-slider .c-simple-slider-item-wrap {
+	display: table;
+	width: 300%;
+}
+
+.c-simple-slider .c-simple-slider-item-wrap>.c-simple-slider__item {
+	width: 33.333%;
+	display: table-cell;
+	overflow: hidden;
+	position: relative;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform .5s ease-in-out;
+	transition: transform .5s ease-in-out
+}
+
+.c-simple-slider-wrap .c-simple-slider__control-btn {
+	position: absolute;
+	display: none;
+	z-index: 1;
+	top: 1px;
+	color: $color-btn-primary;
+	background-color: $color-brand-yellow-dark;
+	background-image: url(#{$img-path}/#{$icon-right-arrow-white});
+    background-repeat: no-repeat;
+    background-size: 2rem auto; 
+    background-position: center center;	
+	width: 3.5rem;
+	height: 3rem;
+	cursor: pointer;
+}
+
+.c-simple-slider-wrap .c-simple-slider__control-btn:hover {
+	background-color: $color-brand-yellow;
+}
+
+#simple-slider-btn-goto-first:checked~#simple-slider-arrow-1,
+#simple-slider-btn-1:checked~#simple-slider-arrow-2,
+#simple-slider-btn-2:checked~#simple-slider-arrow-3,
+#simple-slider-btn-3:checked~#simple-slider-arrow-1 {
+	right: 1px;
+	display: block
+}
+
+#simple-slider-btn-2:checked~#simple-slider-arrow-1,
+#simple-slider-btn-3:checked~#simple-slider-arrow-2,
+#simple-slider-btn-1:checked~#simple-slider-arrow-3 {
+	right: 4rem;
+	display: block;
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1)
+}
+
+.c-simple-slider-wrap #simple-slider-btn-1:checked~.c-simple-slider .c-simple-slider-item-wrap>.c-simple-slider__item,
+.c-simple-slider #simple-slider-btn-goto-first:checked~.c-simple-slider .c-simple-slider-item-wrap>.c-simple-slider__item {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0)
+}
+
+.c-simple-slider-wrap #simple-slider-btn-2:checked~.c-simple-slider .c-simple-slider-item-wrap>.c-simple-slider__item {
+	-webkit-transform: translate(-100%, 0);
+	-ms-transform: translate(-100%, 0);
+	transform: translate(-100%, 0)
+}
+
+.c-simple-slider-wrap #simple-slider-btn-3:checked~.c-simple-slider .c-simple-slider-item-wrap>.c-simple-slider__item,
+.c-simple-slider #simple-slider-btn-goto-last:checked~.c-simple-slider .c-simple-slider-item-wrap>.c-simple-slider__itemiv {
+	-webkit-transform: translate(-200%, 0);
+	-ms-transform: translate(-200%, 0);
+	transform: translate(-200%, 0)
+}
+
+

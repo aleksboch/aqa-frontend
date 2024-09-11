@@ -1,0 +1,52 @@
+// ------------------------------------
+//   #HEADINGS
+//   styles
+// ------------------------------------
+
+h1, h2, h3, h4, h5, h6, legend {
+    color: $color-brand-primary;
+    @include font-family(default);
+    @include font-weight(medium);
+    margin: 1.5rem 0 .5rem 0;
+}
+
+h1 {
+    //margin: 0 0 1rem 0;
+    line-height: 1.0;
+    @include font-size($font-size-h1,1);
+    
+    //Not sure why this was done
+    //commented out
+    //
+    //.row & {
+    //    width: 100%;
+    //    margin-left: 1rem;
+    // }
+
+    &.banner-heading {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+}
+
+h2 {
+    @include font-size($font-size-h2,1.3);
+}
+
+h3 {
+    @include font-size($font-size-h3,1.3);
+}
+
+h4 {
+    @include font-size($font-size-h4,1.3);
+}
+
+h5 {
+    @include font-size($font-size-h5,1.3);
+}
+
+h6 {
+    @include font-size($font-size-h6,1.3);
+}
+

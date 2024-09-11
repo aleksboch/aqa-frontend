@@ -1,0 +1,271 @@
+// ------------------------------------
+//   #Panel
+//   styles
+// ------------------------------------
+
+.c-panel {
+	border: .07rem solid $color-grey;
+	background-color: $color-page-background;
+	overflow: hidden;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	-o-flex-flow: column;
+	flex-flow: column;
+	&__right--arrow--grey{
+		background-image: url(#{$img-path}/#{$icon-pointer-right-grey});
+       	background-repeat: no-repeat;
+		background-position: 100% 25%;
+		background-size: 2rem;
+		padding-right: 1.5rem;
+		@include breakpoint ($screen-only, $tablet-to) {
+			background:none;
+			padding-right: 0;
+		}
+	}
+	&__left--arrow--grey{
+		background-image: url(#{$img-path}/#{$icon-pointer-left-grey});
+       	background-repeat: no-repeat;
+		background-position: 0% 25%;
+		background-size: 2rem;
+		padding-left: 1.5rem;
+		@include breakpoint ($screen-only, $tablet-to) {
+			background:none;
+			padding-left:0;
+		}
+	}
+	&__header {
+		padding: 1.5rem 1rem .5rem 1rem;
+
+		&--media {
+			padding: 0;
+		}
+
+		&--media-alt {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&--compact {
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 1.2rem;
+			margin: 0;
+		}
+	}
+
+	&__content {
+		padding: 1rem;
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		min-height: 1px; //IE11 fix
+
+		&--media {
+			padding: 0;
+
+			&-link:hover &-image {
+				-webkit-filter: brightness(80%);
+				-moz-filter: brightness(80%);
+				-o-filter: brightness(80%);
+				-ms-filter: brightness(80%);
+				filter: brightness(80%);
+			}
+		}
+
+		&--media-alt {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@include breakpoint ($screen-only, $tablet-from, $tablet-to) {
+			html.rwd &--nogrow-md {
+				-webkit-box-flex: 0;
+				-webkit-flex-grow: 0;
+				-ms-flex-positive: 0;
+				flex-grow: 0;
+			}
+		}
+
+	}
+
+	&__footer {
+		padding: 1rem;
+
+		&--media {
+			padding: 0;
+		}
+
+		&--media-alt {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&--interactive:hover {
+		cursor: pointer;
+	}
+
+	&--bare {
+		border: none;
+		background-color: inherit;
+	}
+
+	&--full-height {
+		height: 100%;
+		min-height: 100%;
+	}
+
+	&--sbs {
+		padding: 1rem;
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		padding: 0;
+
+		@include breakpoint ($screen-only, $mobile-to) {
+			html.rwd & {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				border-bottom: $border-width $border-style $color-border-default;
+			}
+		}
+	}
+	&--link {
+		@include hocus {
+			cursor: pointer;
+			box-shadow: none;
+			border: none;
+			outline: 0;
+			background-color: $color-grey-lightest;
+		}
+		&--border {
+			@include hocus {
+				cursor: pointer;
+				box-shadow: none;
+				outline: 0;
+				background-color: $color-grey-lightest;
+			}	
+		}	
+
+	}
+	// Panel modifier for background cover image, url passed in a inline style
+	&--cover {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+
+		 &[loading="lazy"] {
+			 @include image-placeholder;
+		 }
+	}
+
+	&--contain {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right bottom;
+
+		&[loading="lazy"] {
+			 @include image-placeholder;
+		 }
+	}
+
+	&--bg-default {
+		background-repeat: no-repeat;
+		background-position: center right;
+
+		&[loading="lazy"] {
+			 @include image-placeholder;
+		 }
+	}
+	&--bg-center{
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		&[loading="lazy"] {
+			 @include image-placeholder;
+		 }
+
+	}
+
+	@include breakpoint ($screen-only, $mobile-to) {
+		html.rwd & {
+			&--sm-contain {
+				//background-size: contain;
+				background-size: auto 11rem;
+			}
+			
+		}
+	}
+
+	// Will change, currently a placeholder.
+	&--cta {
+		background-color: $color-nav-border-bottom;
+	}
+
+	// wrapper for a group of panels
+	// usually used alongside .row
+	&-group {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 1 0 auto;
+		-webkit-flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
+		flex: 1 0 auto;
+
+		//margin-bottom: 1rem;
+		&__item {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			// -webkit-box-flex: 1 0 auto;
+			// -webkit-flex: 1 0 auto;
+			// -ms-flex: 1 0 auto;
+			// flex: 1 0 auto;				
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-flex-flow: column;
+			-moz-flex-flow: column;
+			-ms-flex-flow: column;
+			-o-flex-flow: column;
+			flex-flow: column;
+			margin-bottom: 1rem;
+			//padding: 0;
+		}
+	}
+	
+
+
+}
+
+.js-panel:hover {
+	cursor: pointer;
+	.js-panel-link {
+		text-decoration: underline;
+	}
+}

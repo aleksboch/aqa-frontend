@@ -1,0 +1,67 @@
+// ------------------------------------
+//   #Badges styles - should only be attached to span
+// ------------------------------------
+.c-badge {
+    padding: .2rem .8rem;
+    background-color: $color-grey-dark;
+    color: $color-page-background;
+    font-size: .8rem;
+    border-radius: 12px;
+
+    &--new {
+        background-color: $color-brand-green-dark;
+        color: $color-page-background;
+        
+        &--turquoise{
+            background-color: $color-brand-turquoise;
+        }
+    }
+    &--curly{
+        border-radius: 30px 0px;
+    }
+    &--large{
+        font-size: 1.15rem;
+        vertical-align: middle;
+        padding: .5rem 1rem;
+        border-radius: 20px;
+        margin: 0 0 .5rem;
+    }
+
+    &--medium {
+        font-size: 1.0rem;
+    }
+
+    &--alert {
+        background-color: $color-notification-danger;
+        color: $color-brand-red;
+    }
+    &--warning {
+        background-color: $color-notification-warning;
+        color: $color-grey-black;
+    }
+    //used on inside exams
+     &--light-new {
+         background-color: $color-interface-blue-tint-90;
+         color: $color-grey-black;
+     }
+     //used on date line
+     &--circle{
+        border-radius:50%; 
+        padding:1rem; 
+        &--large{
+            font-size:1rem;
+            padding:1.5rem;
+        }
+     }
+
+    //to be delete 
+    //replace with position modifier
+    &--right{
+        margin-right: .3125rem;
+    }
+    &--left{
+        margin-left: .3125rem;
+    }
+}
+
+//End of Badges styling

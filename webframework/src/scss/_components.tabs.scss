@@ -1,0 +1,162 @@
+// ------------------------------------
+//   #TABS
+//   styles
+// ------------------------------------
+
+.c-tabs {
+    &__nav {
+        position: relative;
+        top: 1px;
+
+        &__list {
+            &--primary {
+                display: inline-table;
+                margin-bottom: 0;
+
+                @include breakpoint($screen-only, $mobile-to) {
+                    html.rwd & {
+                        width: 100%;
+
+                        > .c-tabs__nav__list__item__link:first-child {
+                            margin: 0;
+                        }
+
+                        > .c-tabs__nav__list__item__link {
+                            margin: 0 4px 0 4px;
+                        }
+                    }
+                }
+            }
+
+            &--secondary {
+                //tab specific styles for placing the secondary container in the correct place due to HTML setup
+                border-bottom: 1px solid $color-grey;
+                border-left: 1px solid $color-grey;
+                right: 0;
+                top: 100%;
+
+                > .c-tabs__nav__list__item {
+                    display: block;
+                    border-left: 0;
+                    border-right: 0;
+
+                    @include breakpoint($screen-only, $mobile-to) {
+                        &:last-child {
+                            background-color: $color-brand-secondary;
+                            border: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @include breakpoint($screen-only, $mobile-to) {
+                    html.rwd & {
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &__item {
+                background-color: $color-brand-secondary;
+                color: $color-page-background;
+                cursor: pointer;
+                display: table-cell;
+                border-left: 2px solid $color-page-background;
+                border-right: 2px solid $color-page-background;
+
+                &:first-child {
+                    border-left: 0;
+                }
+
+                &__link {
+                    color: $color-page-background;
+                    padding: .75em;
+                    display: block;
+
+                    @include breakpoint($screen-only, $mobile-to) {
+                        html.rwd & {
+                            border-bottom: 1px solid $color-tabs-border;
+
+                            &.is-active {
+                                border-bottom: 1px solid $color-page-background;
+                            }
+                        }
+                    }
+                }
+
+                &__link[aria-selected="true"] {
+                    background-color: $color-page-background;
+                    color: $color-grey-black;
+                    border-left: 1px solid $color-grey;
+                    border-right: 1px solid $color-grey;
+                    border-top: 1px solid $color-grey;
+                }
+            }
+        }
+
+        &__menu {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            border: 0;
+            top: 0;
+            outline: none;
+            cursor: pointer;
+
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    width: 53px;
+                    border-bottom: 1px solid $color-grey;
+                    border-left: 1px solid $color-grey;
+                    border-top: 1px solid $color-page-background;
+                    border-right: 1px solid $color-page-background;
+                }
+            }
+
+
+            &.c-icon__menu--white {
+                background-color: $color-brand-secondary;
+                border-bottom: 1px solid $color-brand-secondary;
+                padding-left: 0.25rem;
+            }
+
+            &.is-hidden {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__content {
+        padding: 0 1.5rem 1.5rem;
+
+        &.is-active {
+            border: 1px solid $color-grey;
+            display: block;
+        }
+    }
+
+    &__content[aria-hidden='true'] {
+        display: none;
+    }
+
+    &__content[aria-hidden='false'] {
+        display: block;
+        color: $color-grey-black;
+        border: 1px solid $color-grey;
+    }
+}
+
+.js-mobile-tab-menu-icon-is-active {
+    background-color: $color-brand-secondary;
+    padding-left: .2rem;
+}
+
+@include breakpoint($screen-only, $mobile-to) {
+    .js-mobile-tab-container {
+        clear: both;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}

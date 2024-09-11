@@ -1,0 +1,167 @@
+// ------------------------------------
+//   #MODALS
+//   styles
+// ------------------------------------
+
+.c-modal {
+    //so the heading sits with right margin within a lightbox
+    &__title {
+        margin-top: -5px;
+
+        //if title is above an angular app then add margin
+        + .ng-scope {
+            margin-top: 1em;
+        }
+
+        //if title is above a table then add margin
+        + .c-table {
+            margin-top: 1em;
+        }
+    }
+
+    //add-ons
+    &__expand {
+        background: url(#{$img-path}/#{$icon-expand-blue}) no-repeat top center;
+        cursor: pointer;
+        height: 2rem;
+        padding: 1rem;
+        margin: 0.5rem 0 0 0;
+        white-space: nowrap;
+        text-indent: -9999px;
+        outline: none;
+
+        &:active {
+            background-color: white !important;
+        }
+
+        //positioning
+        &--left {
+            float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+
+        @include breakpoint($screen-only, $mobile-to) {
+            display: none;
+
+            //hide on mobile screens
+        }
+    }
+
+    //for displaying a modal on a mobile screen
+}
+
+//targeting the parents that encompass the modals
+//parent
+.mfp-content {
+    //the modal default styling
+    .c-modal {
+        background: $color-page-background;
+        padding: 1.25rem;
+        margin: 0 0.75rem 0 0.75rem;
+
+        //removes the popup link if MFP HTML is surrounding modal
+        &__expand {
+            display: none;
+        }
+
+        //size modifiers
+        &--small {
+            //pos: relative to align the cross into the lightbox
+            position: relative;
+            max-width: 30rem;
+        }
+
+        &--medium {
+            position: relative;
+            max-width: 54rem;
+        }
+
+        //positioning of lightbox
+        &--center {
+            margin: 0 auto;
+        }
+    }
+}
+
+// MANUAL MOBILE OVERLAY BELOW:
+
+//You will need to set a button, text or any other element's href to point to
+//a unique ID. That unique ID will be also have the class of 'c-modal-overlay--container'
+
+//HTML EXAMPLE
+//
+//
+//This <a> tag contains the ID to target the overlay container
+//<a href="#show-overlay">Filter</a>
+//
+//
+//  The ID in the tag above is copied into the container's ID
+//  <div class="c-modal--overlay__container" id="show-overlay">
+//
+//
+//    Make sure you encapsulate your modal content in a div
+//    
+//    <div> //this div is where your content will sit inside and will provide
+//          //the necessary styling
+//
+//      <h3>Modal title</h3>
+//      
+//        <p>Paragraph text here</p>
+//
+//    </div>
+//
+//  </div>
+
+//The targets a generic div tag because that is where the content will sit.
+
+@include breakpoint($screen-only, $mobile-to) {
+    //use the below settings to produce the desired output
+    .c-modal--overlay {
+        //will hide the selected element but can switch to being displayed as
+        //a modal if href and URL are linked together
+        &__container {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            position: fixed;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            visibility: hidden;
+
+            //shows the intended target element when href is clicked
+
+            &:target {
+                visibility: visible;
+                opacity: 1;
+                overflow-y: auto;
+                z-index: 51;
+            }
+
+            // class added to target
+            &.is-active {
+                opacity: 1;
+                overflow-y: auto;
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                visibility: visible;
+                z-index: 51;
+            }
+
+            //modal content here
+            > div {
+                background: $color-page-background;
+                width: 100%;
+             
+            }
+        }
+    }
+}

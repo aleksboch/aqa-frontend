@@ -1,0 +1,351 @@
+//----------------------------------
+//  #ICONS
+//----------------------------------
+
+//Icon size variables
+$icon-size: 1rem; //default sizze
+$icon-size-xsmall: .5rem;
+$icon-size-small: .75rem;
+$icon-size-medium: 1.5rem;
+$icon-size-large: 2rem;
+$icon-size-xlarge: 3rem;
+
+//Icon filenames
+
+//main logo
+$icon-logo-no-strapline-white: "c-icon__AQA-logo-no-strapline--white.svg";
+$icon-logo-no-strapline-rgb: "c-icon__AQA-logo-no-strapline--rgb.svg";
+
+$icon-right-arrow-blue: "c-icon__right-arrow--blue.svg";
+$icon-right-arrow-white: "c-icon__right-arrow--white.svg";
+$icon-right-arrow-grey: "c-icon__right-arrow--grey.svg";
+$icon-right-arrow-purple: "c-icon__right-arrow--purple.svg";
+$icon-right-arrow-red: "c-icon__right-arrow--red.svg";
+
+$icon-left-arrow-blue: "c-icon__left-arrow--blue.svg";
+$icon-left-arrow-white: "c-icon__left-arrow--white.svg";
+$icon-left-arrow-grey: "c-icon__left-arrow--grey.svg";
+$icon-left-arrow-purple: "c-icon__left-arrow--purple.svg";
+$icon-left-arrow-red: "c-icon__left-arrow--red.svg";
+
+$icon-down-arrow-blue: "c-icon__down-arrow--blue.svg";
+$icon-down-arrow-white: "c-icon__down-arrow--white.svg";
+$icon-down-arrow-grey: "c-icon__down-arrow--grey.svg";
+$icon-down-arrow-purple: "c-icon__down-arrow--purple.svg";
+$icon-down-arrow-red: "c-icon__down-arrow--red.svg";
+
+$icon-up-arrow-white: "c-icon__up-arrow--white.svg";
+$icon-up-arrow-purple: "c-icon__up-arrow--purple.svg";
+$icon-up-arrow-blue: "c-icon__up-arrow--blue.svg";
+$icon-up-arrow-red: "c-icon__up-arrow--red.svg";
+
+$icon-updown-arrow-white: "c-icon__updown-arrow--white.svg";
+$icon-updown-arrow-purple: "c-icon__updown-arrow--purple.svg";
+$icon-updown-arrow-blue: "c-icon__updown-arrow--blue.svg";
+$icon-updown-arrow-red: "c-icon__updown-arrow--red.svg";
+
+$icon-reset-blue: "c-icon__reset--blue.svg";
+$icon-reset-white: "c-icon__reset--white.svg";
+$icon-reset-purple: "c-icon__reset--purple.svg";
+$icon-reset-red: "c-icon__reset--red.svg";
+
+$icon-question-blue: "c-icon__question--blue.svg";
+
+$icon-exclamation-red: "c-icon__exclamation--red.svg";
+$icon-exclamation-purple: "c-icon__exclamation--purple.svg";
+$icon-exclamation-blue: "c-icon__exclamation--blue.svg";
+$icon-exclamation-white: "c-icon__exclamation--white.svg";
+
+$icon-search-white: "c-icon__search--white.svg";
+$icon-search-purple: "c-icon__search--purple.svg";
+$icon-search-blue: "c-icon__search--blue.svg";
+$icon-search-red: "c-icon__search--red.svg";
+
+$icon-anim-loading-purple: "c-icon__anim-loading--purple.svg";
+$icon-anim-loading-white: "c-icon__anim-loading--white.svg";
+
+$gif-anim-loading-purple: "c-icon__anim-loading--purple.gif";
+$gif-anim-loading-white: "c-icon__anim-loading--white.gif";
+
+$icon-cross-blue: "c-icon__cross--blue.svg";
+$icon-cross-green: "c-icon__cross--green.svg";
+$icon-cross-orange: "c-icon__cross--orange.svg";
+$icon-cross-red: "c-icon__cross--red.svg";
+$icon-cross-white: "c-icon__cross--white.svg";
+$icon-cross-dark: "c-icon__cross--dark.svg";
+$icon-cross-purple: "c-icon__cross--purple.svg";
+
+$icon-tick-white: "c-icon__tick--white.svg";
+$icon-tick-green: "c-icon__tick--green.svg";
+$icon-tick-blue: "c-icon__tick--blue.svg";
+$icon-tick-purple: "c-icon__tick--purple.svg";
+$icon-tick-red: "c-icon__tick--red.svg";
+
+$icon-tick-square-purple: "c-icon__tick-square--purple.svg";
+$icon-tick-square-blue: "c-icon__tick-square--blue.svg";
+$icon-tick-square-white: "c-icon__tick-square--white.svg";
+$icon-tick-square-red: "c-icon__tick-square--red.svg";
+
+$icon-calendar-blue: "c-icon__calendar--blue.svg";
+$icon-calendar-white: "c-icon__calendar--white.svg";
+
+$icon-play-white: "c-icon__play--white.svg";
+$icon-play-grey: "c-icon__play--grey.svg";
+$icon-play-blue: "c-icon__play--blue.svg";
+$icon-play-purple: "c-icon__play--purple.svg";
+$icon-play-red: "c-icon__play--red.svg";
+
+$icon-link-white: "c-icon__link--white.svg";
+$icon-link-grey: "c-icon__link--grey.svg";
+$icon-link-blue: "c-icon__link--blue.svg";
+$icon-link-red: "c-icon__link--red.svg";
+$icon-link-purple: "c-icon__link--purple.svg";
+
+$icon-file-grey: "c-icon__file--grey.svg";
+
+$icon-question-circle-grey: "c-icon__question-circle--grey.svg";
+$icon-question-circle-purple: "c-icon__question-circle--purple.svg";
+$icon-question-circle-blue: "c-icon__question-circle--blue.svg";
+$icon-question-circle-white: "c-icon__question-circle--white.svg";
+$icon-question-circle-red: "c-icon__question-circle--red.svg";
+
+$icon-info-grey: "c-icon__info--grey.svg";
+$icon-info-purple: "c-icon__info--purple.svg";
+$icon-info-blue: "c-icon__info--blue.svg";
+$icon-info-white: "c-icon__info--white.svg";
+$icon-info-red: "c-icon__info--red.svg";
+
+$icon-clock-grey: "c-icon__clock--grey.svg";
+$icon-clock-purple: "c-icon__clock--purple.svg";
+$icon-clock-blue: "c-icon__clock--blue.svg";
+$icon-clock-white: "c-icon__clock--white.svg";
+$icon-clock-red: "c-icon__clock--red.svg";
+
+$icon-external-blue: "c-icon__external--blue.svg";
+$icon-external-white: "c-icon__external--white.svg";
+$icon-external-purple: "c-icon__external--purple.svg";
+$icon-external-red: "c-icon__external--red.svg";
+
+$icon-external-alt-blue: "c-icon__external-alt--blue.svg";
+
+//modal expand
+$icon-expand-blue: "c-icon__screenexpand--blue.svg";
+
+//accordion buttons
+$icon-circle-plus-grey: "c-icon__plus-circle--grey.svg";
+$icon-circle-plus-purple: "c-icon__plus-circle--purple.svg";
+$icon-circle-minus-grey: "c-icon__minus-circle--grey.svg";
+$icon-circle-minus-purple: "c-icon__minus-circle--purple.svg";
+
+$icon-square-plus-blue: "c-icon__plus-square--blue.svg";
+$icon-square-plus-white: "c-icon__plus-square--white.svg";
+$icon-square-plus-red: "c-icon__plus-square--red.svg";
+$icon-square-plus-purple: "c-icon__plus-square--purple.svg";
+
+$icon-home-purple: "c-icon__home--purple.svg";
+
+$icon-profile-purple: "c-icon__profile--purple.svg";
+
+$icon-bin-blue: "c-icon__bin--blue.svg";
+$icon-bin-purple: "c-icon__bin--purple.svg";
+$icon-bin-white: "c-icon__bin--white.svg";
+$icon-bin-red: "c-icon__bin--red.svg";
+
+//social icons
+$icon-twitter-grey: "c-icon__twitter--grey.svg";
+$icon-twitter-white: "c-icon__twitter--white.svg";
+$icon-twitter-blue: "c-icon__twitter--blue.svg";
+$icon-twitter-red: "c-icon__twitter--red.svg";
+$icon-twitter-circle-red: "c-icon__twitter-circle--red.svg";
+$icon-twitter-black: "c-icon__twitter--black.svg";
+$icon-linkedin-grey: "c-icon__linkedin--grey.svg";
+$icon-linkedin-red: "c-icon__linkedin--red.svg";
+$icon-linkedin-white: "c-icon__linkedin--white.svg";
+$icon-linkedin-circle-red: "c-icon__linkedin-circle--red.svg";
+$icon-youtube-grey: "c-icon__youtube--grey.svg";
+$icon-youtube-red: "c-icon__youtube--red.svg";
+$icon-youtube-white: "c-icon__youtube--white.svg";
+$icon-youtube-circle-red: "c-icon__youtube-circle--red.svg";
+$icon-youtube-square-purple: "c-icon__youtube-square--purple.svg";
+$icon-facebook-white: "c-icon__facebook--white.svg";
+$icon-whatsapp-white: "c-icon__whatsapp--white.svg";
+
+$icon-email-white: "c-icon__email--white.svg";
+$icon-email-purple: "c-icon__email--purple.svg";
+$icon-email-blue: "c-icon__email--blue.svg";
+$icon-email-red: "c-icon__email--red.svg";
+
+//podcast icons
+$icon-spotify-white: "c-icon__spotify--white.svg";
+$icon-apple-podcasts-white: "c-icon__apple-podcasts--white.svg";
+$icon-google-podcasts-white: "c-icon__google-podcasts--white.svg";
+
+//file icons
+$icon-pdf: "c-icon__pdf--red.svg";
+$icon-doc: "c-icon__word--blue.svg";
+$icon-file:"c-icon__text--grey.svg";
+$icon-web:"c-icon__web--turquoise.svg";
+$icon-xls:"c-icon__excel--green.svg";
+$icon-mp3:"c-icon__mp3--orange.svg";
+$icon-zip:"c-icon__zip--grey.svg";
+$icon-ppt:"c-icon__powerpoint--orange.svg";
+//menu icons
+$icon-login-purple: "c-icon__login--purple.svg";
+$icon-login-blue: "c-icon__login--blue.svg";
+$icon-login-white: "c-icon__login--white.svg";
+$icon-login-red: "c-icon__login--red.svg";
+
+$icon-padlock-purple: "c-icon__padlock--purple.svg";
+
+$icon-qstroke-purple: "c-icon__q-stroke--purple.svg";
+$icon-qstroke-white: "c-icon__q-stroke--white.svg";
+$icon-qstroke-blue: "c-icon__q-stroke--blue.svg";
+$icon-qstroke-white: "c-icon__q-stroke--white.svg";
+
+$icon-padlock-white: "c-icon__padlock--white.svg";
+
+$icon-plus-purple: "c-icon__plus--purple.svg";
+$icon-plus-white: "c-icon__plus--white.svg";
+$icon-plus-blue: "c-icon__plus--blue.svg";
+$icon-plus-red: "c-icon__plus--red.svg";
+
+//footer icons
+$icon-qstroke-red: "c-icon__q-stroke--red.svg";
+
+$icon-menu-purple: "c-icon__menu--purple.svg";
+$icon-menu-blue: "c-icon__menu--blue.svg";
+$icon-menu-white: "c-icon__menu--white.svg";
+$icon-menu-red: "c-icon__menu--red.svg";
+
+//safari folder
+
+$icon-safari-search-purple: "safari/c-icon__search--purple.svg";
+//contact icons
+$icon-phone-purple: "c-icon__phone--purple.svg";
+$icon-phone-white: "c-icon__phone--white.svg";
+$icon-phone-blue: "c-icon__phone--blue.svg";
+$icon-phone-red: "c-icon__phone--red.svg";
+$icon-phone-grey: "c-icon__phone--grey.svg";
+//AQA in mumbers icons
+$icon-user-purple:"c-icon__user--purple.svg"; 
+
+$icon-users-blue:"c-icon__users--blue.svg";
+$icon-users-purple:"c-icon__users--purple.svg";
+$icon-users-red:"c-icon__users--red.svg";
+$icon-users-white:"c-icon__users--white.svg";
+
+$icon-user-chalkboard--purple: "c-icon__user-chalkboard--purple.svg";
+
+$icon-upload-blue:"c-icon__upload--blue.svg";
+$icon-upload-purple:"c-icon__upload--purple.svg";
+$icon-upload-white:"c-icon__upload--white.svg";
+$icon-upload-red:"c-icon__upload--red.svg";
+
+$icon-page-blue:"c-icon__page--blue.svg";
+$icon-teacher-blue:"c-icon__teacher--blue.svg";
+$icon-globe-blue:"c-icon__globe--blue.svg";
+
+$icon-download-blue:"c-icon__download--blue.svg";
+$icon-download-purple:"c-icon__download--purple.svg";
+$icon-download-white:"c-icon__download--white.svg";
+$icon-download-red:"c-icon__download--red.svg";
+
+$icon-award-blue:"c-icon__award--blue.svg";
+$icon-bank-blue:"c-icon__bank--blue.svg";
+
+$icon-exampro-logo:"c-icon__exampro--logo.svg";
+$icon-teachit-logo:"c-icon__teachit--logo.svg";
+
+$icon-star-purple:"c-icon__star--purple.svg";
+$icon-star-blue:"c-icon__star--blue.svg";
+$icon-star-white:"c-icon__star--white.svg";
+$icon-star-red:"c-icon__star--red.svg";
+
+$icon-sort-by-blue:"c-icon__sort-by--blue.svg";
+$icon-sort-by-grey:"c-icon__sort-by--grey.svg";
+$icon-sort-by-purple:"c-icon__sort-by--purple.svg";
+$icon-sort-by-red:"c-icon__sort-by--red.svg";
+$icon-sort-by-white:"c-icon__sort-by--white.svg";
+
+$icon-filter-blue:"c-icon__filter--blue.svg";
+$icon-filter-grey:"c-icon__filter--grey.svg";
+$icon-filter-purple:"c-icon__filter--purple.svg";
+$icon-filter-white:"c-icon__filter--white.svg";
+$icon-filter-red:"c-icon__filter--red.svg";
+
+$icon-pointer-left-grey:"c-icon__pointer-left--grey.svg";
+$icon-pointer-right-grey:"c-icon__pointer-right--grey.svg";
+
+//teacher icon
+$icon-teacher-whiteboard-blue:"c-icon__teacher-whiteboard--blue.svg";
+$icon-teacher-whiteboard-black:"c-icon__teacher-whiteboard--black.svg";
+$icon-teacher-whiteboard-purple:"c-icon__teacher-whiteboard--purple.svg";
+$icon-teacher-whiteboard-white:"c-icon__teacher-whiteboard--white.svg";
+$icon-teacher-whiteboard-red:"c-icon__teacher-whiteboard--red.svg";
+
+//school check icon
+$icon-school-check-blue:"c-icon__school-check--blue.svg";
+$icon-school-check-black:"c-icon__school-check--black.svg";
+$icon-school-check-purple:"c-icon__school-check--purple.svg";
+$icon-school-check-white:"c-icon__school-check--white.svg";
+$icon-school-check-red:"c-icon__school-check--red.svg";
+
+$icon-text-document-purple:"c-icon__text-document--purple.svg";
+$icon-globe-africa-purple:"c-icon__globe-africa--purple.svg";
+$icon-people-group-purple:"c-icon__people-group--purple.svg";
+$icon-questions-purple:"c-icon__questions--purple.svg";
+$icon-marker-purple:"c-icon__marker--purple.svg";
+$icon-blank-file-purple:"c-icon__blank-file--purple.svg";
+$icon-school-purple:"c-icon__school--purple.svg";
+
+$icon-write-blue:"c-icon__write--blue.svg";
+$icon-develop-blue:"c-icon__develop--blue.svg";
+$icon-scan-blue:"c-icon__scan--blue.svg";
+
+$icon-content-green:"c-icon__content--green.svg";
+$icon-updatedcontent-orange:"c-icon__updatedcontent--orange.svg";
+
+$icon-linkedin-blue:"c-icon__linkedin--blue.svg";
+
+$icon-pen-paper-purple:"c-icon__pen-paper--purple.svg";
+$icon-pen-paper-blue:"c-icon__pen-paper--blue.svg";
+$icon-pen-paper-red:"c-icon__pen-paper--red.svg";
+$icon-pen-paper-white:"c-icon__pen-paper--white.svg";
+
+$icon-meeting-purple:"c-icon__meeting--purple.svg";
+$icon-meeting-blue:"c-icon__meeting--blue.svg";
+$icon-meeting-white:"c-icon__meeting--white.svg";
+$icon-meeting-red:"c-icon__meeting--red.svg";
+
+$icon-pen-purple:"c-icon__pen--purple.svg";
+$icon-pen-blue:"c-icon__pen--blue.svg";
+$icon-pen-white:"c-icon__pen--white.svg";
+$icon-pen-red:"c-icon__pen--red.svg";
+
+$icon-twitter-purple:"c-icon__twitter--purple.svg";
+
+$icon-wallet-purple:"c-icon__wallet--purple.svg";
+$icon-wallet-blue:"c-icon__wallet--blue.svg";
+$icon-wallet-white:"c-icon__wallet--white.svg";
+$icon-wallet-red:"c-icon__wallet--red.svg";
+
+$icon-bell-blue:"c-icon__bell--blue.svg";
+$icon-bell-purple:"c-icon__bell--purple.svg";
+$icon-bell-white:"c-icon__bell--white.svg";
+$icon-bell-red:"c-icon__bell--red.svg";
+
+$icon-video-teal:"c-icon__video--teal.svg";
+$icon-textbook-turquoise:"c-icon__textbook--turquoise.svg";
+$icon-smiley-purple:"c-icon__smiley--purple.svg";
+$icon-head-open-book-purple:"c-icon__head-open-book--purple.svg";
+$icon-running-figure-purple:"c-icon__running-figure--purple.svg";
+$icon-graduate-purple:"c-icon__graduate--purple.svg";
+$icon-graph-purple: "c-icon__graph--purple.svg";
+$icon-desktop-purple: "c-icon__desktop--purple.svg";
+$icon-paperclip-purple: "c-icon__paperclip--purple.svg";
+$icon-flask-purple: "c-icon__flask--purple.svg";
+
+$icon-audio-blue: "c-icon__audio--blue.svg";
+$icon-audio-purple: "c-icon__audio--purple.svg";
+$icon-audio-white: "c-icon__audio--white.svg";
+$icon-audio-red: "c-icon__audio--red.svg";

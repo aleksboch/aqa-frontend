@@ -1,0 +1,103 @@
+// ------------------------------------
+//   #ACCORDION
+//   styles
+// ------------------------------------/
+
+.c-accordion {
+    margin: 0 auto 2rem auto;
+    padding: 0;
+
+    &__title {
+        display: block;
+        text-decoration: none;
+        color: $color-brand-primary;
+        padding: .8rem 0;
+        //border-bottom: 0.0625rem solid $color-accordion-title-border;
+
+        @include font-family(default);
+        @include font-weight(medium);
+
+        font-size: 1.125rem;
+        font-weight: normal;
+
+        &:before {
+            font-size: 1.5rem;
+            line-height: .5rem;
+            float: left;
+        }
+
+        &__btn {
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 1rem;
+
+            &.is-expanded {
+                background-image: url(#{$img-path}/#{$icon-circle-minus-grey});
+            }
+
+            &.is-collapsed {
+                background-image: url(#{$img-path}/#{$icon-circle-plus-grey});
+            }
+
+            &--left {
+                background-position: left center;
+                padding-left: 1.5rem;
+            }
+
+        }
+    }
+
+    // for opening and closing the accordion */
+
+    &__item {
+        height: auto;
+        overflow: hidden;
+        margin-left: 0;
+        border-width: .0625rem;
+        border-color: $color-scrollbar-search-border;
+        border-style: solid;
+
+        &.has-transition {
+            max-height: 500rem;
+            @include transition(max-height .5s ease-in);
+        }       
+
+        &.is-expanded {
+            padding: 1rem;
+        }
+
+        &.is-scrollable {
+            overflow-y: auto;
+            max-height: 16rem;
+        }
+
+        &.is-collapsed {
+            max-height: 0;
+            &.has-transition {
+                max-height: 0;
+                @include transition(max-height .25s ease-out);
+            }
+        }
+
+        &--no-padding {
+            padding: 0;
+            
+            &.is-expanded {
+                padding: 0;
+            }            
+        }
+    }
+
+    @include breakpoint($screen-only, $mobile-to) {
+        &__close {
+            background-image: url(#{$img-path}/#{$icon-cross-blue});
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: 1rem;
+            top: 1.25rem;
+            right: 1.875rem;
+            cursor: pointer;
+            display: block;
+        }
+    }
+}

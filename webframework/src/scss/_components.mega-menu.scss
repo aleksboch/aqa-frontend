@@ -1,0 +1,86 @@
+// ------------------------------------
+//   #MEGA-MENU
+//   styles
+// ------------------------------------/
+
+.c-mega-menu {
+    background: $color-grey-lightest-shadow;
+    display: none;
+    position: absolute;
+    height: auto;
+    height: 25rem;
+    text-align: left;
+    top: 8.05rem;
+    width: 100%;
+    z-index: 2;
+
+
+    html.rwd & {
+
+        //Desktop only start
+        @include breakpoint($media-screen-only, $media-desktop-from, $media-desktop-to) {
+            max-width: 90rem;
+        }
+        //Desktop only end
+
+        //Large desktop only start
+        @include breakpoint($media-screen-only, $media-desktop-large-from) {
+            max-width: 90rem;
+        }
+        //Large desktop only end       
+    }
+
+    &__overlay {
+        opacity: 0.4;
+        background-color: #000;
+        transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        position: fixed;
+        z-index: 1;
+        height: calc(100% - 111px);
+        width: 100%;
+        top: 8.05rem;
+        left: 0;
+    }
+
+    &__content {
+        height: 23rem;
+        max-height: 23rem;
+    }
+}
+
+.c-primary-nav__link.js-mega-menu-activate-hover {
+    background: $color-grey-lightest-shadow;
+    //border-bottom: 1px solid $color-grey-lightest-shadow;
+    color: $color-brand-primary;
+
+    // &:after {
+    //     background: $color-grey-lightest-shadow;
+    //     content: "";
+    //     position: absolute;
+    //     height: 0.75rem;
+    //     z-index: 10;
+    //     width: 100%;
+    //     top: 97%;
+    //     left: 0;
+    // }
+}
+
+.js-mega-menu {
+
+	&.is-active {
+        display: block;
+    }
+}
+
+body.js-mega-menu-fixedscroll {
+    overflow-y: scroll;
+}
+
+body.js-mega-menu-sticky {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

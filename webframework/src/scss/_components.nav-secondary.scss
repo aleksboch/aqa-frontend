@@ -1,0 +1,139 @@
+// ------------------------------------
+//   #NAV-SECONDARY
+//   styles
+// ------------------------------------
+
+@mixin shared-links-css() {
+    color: $color-brand-secondary;
+    background-image: url(#{$img-path}/#{$icon-right-arrow-blue});
+    background-color: $color-nav-background-hover;
+    background-size: 1rem;
+}
+
+.c-sub-nav {
+
+    &.is-hidden {
+        display: none;
+    }
+    
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        list-style-type: none;
+
+        &__link {
+            content: ""; 
+            display: block;
+            background: url(#{$img-path}/#{$icon-right-arrow-grey}) no-repeat 98% 50%;
+            background-size: 1rem;
+            border-bottom: $color-grey solid 1px;
+            padding: .35rem 1.5rem .35rem 1rem;
+            color: $color-forms-input-select-textarea;
+            line-height: 1.4rem;
+            &:hover {
+                @include shared-links-css();
+            }
+
+        }
+        &.is-active > &__link {
+            color: $color-page-background;
+            background-color: $color-brand-primary;
+            background-image: url(#{$img-path}/#{$icon-right-arrow-white});
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    background-color: $color-brand-primary-shadow;
+                }
+            }            
+        }
+        & & &__link {
+            padding: .35rem 1.5rem .35rem 2.5rem; 
+            @include breakpoint($screen-only, $tablet-small-to) {
+                html.rwd & {
+                    padding-left: 1.75rem;
+                }
+            }           
+        }
+        & & & &__link {
+            padding: .35rem .5rem .35rem 4rem; 
+            @include breakpoint($screen-only, $tablet-small-to) {
+                html.rwd & {
+                    padding-left: 2.5rem;
+                }
+            }
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    padding-left: 3.5rem;
+                }
+            }
+        }
+    }
+
+    @include breakpoint($screen-only, $tablet-from) {
+        html.rwd & {
+            padding: .5rem 1rem .5rem;
+            width: 12em;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 12em;
+            -ms-flex: 0 0 12em;
+            flex: 0 0 12em;
+            flex-grow: 0;     // do not grow   - initial value: 0 
+            flex-shrink: 0;   // do not shrink - initial value: 1
+            -webkit-flex-basis: 12em;
+            -ms-flex-preferred-size: 12em;
+            flex-basis: 12em;
+        }
+    }
+
+    @include breakpoint($screen-only, $tablet-small-from) {
+        html.rwd & {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 18em;
+            -ms-flex: 0 0 18em;
+            flex: 0 0 18em;
+            -webkit-flex-basis: 18em;
+            -ms-flex-preferred-size: 18em;
+            flex-basis: 18em;
+        }
+    }
+
+
+    @include breakpoint($screen-only, $mobile-to) {
+        html.rwd & {
+            display: none;
+
+            &__item {
+
+                &__link {
+                    @include font-family(default);
+                    @include font-weight(medium);
+                    color: $color-page-background;
+                    font-size: 1em;
+                    text-decoration: none;
+                    text-align: left;
+                    border-bottom: 1px solid $color-brand-primary-highlight;
+                    padding: .5em 0;
+                    display: block;
+                    background-image: url(#{$img-path}/#{$icon-right-arrow-white});
+                    background-position: 98% 50%;
+                    background-repeat: no-repeat;
+                    background-size: 1rem;
+
+                    @include hocus {
+                        background-color: $color-brand-primary-highlight;
+                    }
+
+                    &__text {
+                        display: block;
+                        padding: .25rem 1rem 0;
+                        margin: 0;
+                        min-height: 1.9rem;
+                        font-size: 1.1em;
+                        vertical-align: bottom;
+                    }
+                }   
+            }
+        }    
+    }
+}

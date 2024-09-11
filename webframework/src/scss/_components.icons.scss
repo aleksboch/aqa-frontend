@@ -1,0 +1,1102 @@
+// ------------------------------------
+//   #ICONS
+// ------------------------------------
+
+//Default size is $icon-size
+//.c-icon used without a size modifier will be this size
+
+.c-icon {
+    background-repeat: no-repeat;
+    background-size: $icon-size auto; 
+    background-position: center center;
+
+    //Positioning
+    &--right {
+        background-position: center right .25rem;
+        padding-right: $icon-size + .5rem;
+    }
+    &--left {
+        background-position: center left .25rem;
+        padding-left: $icon-size + .5rem;
+    }
+    &--top {
+        background-position: center top .25rem;
+        padding-top: $icon-size + .5rem;
+    }
+    //&--middle { } //TODO
+     &--top--right { 
+        background-position: top .75rem right .75rem;
+     } 
+     &--top--left { 
+        background-position: top .75rem left .75rem;
+     }     
+     
+     
+     //TODO
+    //&--down {   } //TODO
+    //
+
+
+    //Size modifiers
+    &--xsmall {
+        background-size: $icon-size-xsmall auto;
+        &.c-icon--right {
+            padding-right: $icon-size-xsmall + .5rem; 
+        }
+        &.c-icon--left {
+            padding-left: $icon-size-xsmall + .5rem; 
+        }
+    }
+
+    &--small {
+        background-size: $icon-size-small auto;
+        &.c-icon--right {
+            padding-right: $icon-size-small + .5rem; 
+        }
+        &.c-icon--left {
+            padding-left: $icon-size-small + .5rem; 
+        }
+    }
+    &--medium {
+        background-size: $icon-size-medium auto; 
+        &.c-icon--right {
+            background-position: center right .5rem;
+            padding-right: $icon-size-medium + .7rem; 
+        }
+        &.c-icon--left {
+            background-position: center left .5rem;          
+            padding-left: $icon-size-medium + .7rem; 
+        }
+    }
+    &--large {
+        background-size: $icon-size-large auto;
+        &.c-icon--right {
+            background-position: center right .5rem;
+            padding-right: $icon-size-large + .7rem; 
+        }
+        &.c-icon--left {
+            background-position: center left .5rem;          
+            padding-left: $icon-size-large + .7rem; 
+        }
+        &.c-icon__file{
+            background-size: $icon-size-large $icon-size-large + 1rem; 
+        }
+        &.c-icon--top--left { 
+            background-position: top left 1rem;
+            padding-left: $icon-size-large + .7rem;
+         } 
+       
+    }
+    &--xlarge {
+        background-size: $icon-size-xlarge auto;
+        &.c-icon--right {
+            background-position: center right .5rem;
+            padding-right: $icon-size-xlarge + .7rem; 
+        }
+        &.c-icon--left {
+            background-position: center left .5rem;          
+            padding-left: $icon-size-xlarge + .7rem; 
+        }
+        &.c-icon__file{
+            background-size: $icon-size-xlarge $icon-size-xlarge + 1rem; 
+        }
+        &.c-icon--top--left { 
+            background-position: top left 1rem;
+            padding-left: $icon-size-xlarge + .7rem;
+         } 
+       
+    }
+
+    //Right arrow
+    &__right-arrow {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-right-arrow-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-right-arrow-white});
+        }
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-right-arrow-grey});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-right-arrow-purple});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-right-arrow-red});
+        }
+    }
+
+    //Left arrow
+    &__left-arrow {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-left-arrow-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-left-arrow-white});
+        }
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-left-arrow-grey});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-left-arrow-purple});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-left-arrow-red});
+        }
+    }
+
+    //Down arrow
+    //also similar styles use in .c-form__select
+    &__down-arrow {
+        &--blue {
+             background-image: url(#{$img-path}/#{$icon-down-arrow-blue});
+        }
+        &--white {
+             background-image: url(#{$img-path}/#{$icon-down-arrow-white});
+        } 
+        &--purple {
+             background-image: url(#{$img-path}/#{$icon-down-arrow-purple});
+        } 
+        &--red {
+             background-image: url(#{$img-path}/#{$icon-down-arrow-red});
+        }        
+    }
+
+    //Up arrow
+    &__up-arrow {
+        &--white {
+             background-image: url(#{$img-path}/#{$icon-up-arrow-white});
+        }  
+        &--purple {
+             background-image: url(#{$img-path}/#{$icon-up-arrow-purple});
+        } 
+        &--blue {
+             background-image: url(#{$img-path}/#{$icon-up-arrow-blue});
+        } 
+        &--red {
+             background-image: url(#{$img-path}/#{$icon-up-arrow-red});
+        }       
+    }
+
+    //Up and down arrow
+    &__updown-arrow {
+        &--white {
+             background-image: url(#{$img-path}/#{$icon-updown-arrow-white});
+        }
+        &--blue {
+             background-image: url(#{$img-path}/#{$icon-updown-arrow-blue});
+        }
+        &--purple {
+             background-image: url(#{$img-path}/#{$icon-updown-arrow-purple});
+        }
+        &--red {
+             background-image: url(#{$img-path}/#{$icon-updown-arrow-red});
+        }
+    }
+
+    //Reset
+    &__reset {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-reset-blue});      
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-reset-white});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-reset-purple});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-reset-red});
+        }
+    }
+
+    //Question mark ?
+    &__question {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-question-blue});
+        }
+    }
+
+    &__question-circle {
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-question-circle-grey});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-question-circle-purple});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-question-circle-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-question-circle-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-question-circle-red});
+        }
+    }
+
+    &__minus-circle {
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-circle-minus-grey});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-circle-minus-purple});
+        }
+    }
+
+    &__plus-circle {
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-circle-plus-grey});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-circle-plus-purple});
+        }
+    }
+
+    &__plus-square {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-square-plus-blue});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-square-plus-purple});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-square-plus-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-square-plus-red});
+        }
+    }
+
+    &__info {
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-info-grey});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-info-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-info-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-info-red});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-info-purple});
+        }
+    }
+
+    &__file {
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-file-grey});
+        }
+    }
+
+    &__clock {
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-clock-grey});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-clock-blue});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-clock-purple});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-clock-red});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-clock-white});
+        }
+    }
+
+    &__bin {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-bin-blue});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-bin-purple});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-bin-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-bin-red});
+        }
+    }
+
+
+    //Exclamation mark !
+    &__exclamation {
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-exclamation-red});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-exclamation-blue});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-exclamation-purple});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-exclamation-white});
+        }
+    }
+
+    //Search magnify glass
+    &__search {
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-search-white});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-search-purple});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-search-blue});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-search-red});
+        }
+    }
+
+    //Loading animation
+    &__anim-loading{
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-anim-loading-purple});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-anim-loading-white});
+        }
+        // IE10 and IE11 don't support animations in SVG
+        // GIF fallback below
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            &--purple {
+                background-image: url(#{$img-path}/#{$gif-anim-loading-purple});
+            }  
+            &--white { //this only works on blue background
+                background-image: url(#{$img-path}/#{$gif-anim-loading-white});
+            }
+        }
+
+    }
+
+    &__content {
+        &--green {
+            background-image: url(#{$img-path}/#{$icon-content-green});
+        }
+    }
+    &__updatedcontent {
+        &--orange {
+            background-image: url(#{$img-path}/#{$icon-updatedcontent-orange});
+        }
+    }
+
+    //Cross/X 
+    &__cross {
+
+            &--blue {
+                background-image: url(#{$img-path}/#{$icon-cross-blue});  
+            }
+            
+            &--green {
+                background-image: url(#{$img-path}/#{$icon-cross-green});
+            }
+
+            &--orange {
+                background-image: url(#{$img-path}/#{$icon-cross-orange});
+            }
+
+            &--red {
+                background-image: url(#{$img-path}/#{$icon-cross-red});
+            }
+           &--white {
+                background-image: url(#{$img-path}/#{$icon-cross-white});
+            }
+            &--dark {
+                background-image: url(#{$img-path}/#{$icon-cross-dark});
+            }
+            &--purple {
+                background-image: url(#{$img-path}/#{$icon-cross-purple});
+            }
+        }
+
+    //Tick
+    &__tick {
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-tick-white});
+        }
+        &--green {
+            background-image: url(#{$img-path}/#{$icon-tick-green});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-tick-blue});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-tick-purple});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-tick-red});
+        }
+    }
+
+    &__tick-square {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-tick-square-purple});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-tick-square-blue});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-tick-square-red});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-tick-square-white});
+        }
+    }
+
+
+
+    //Calendar
+    &__calendar {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-calendar-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-calendar-white});
+        }
+    }
+
+    //Play button
+    &__play {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-play-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-play-white});
+        }
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-play-grey});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-play-red});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-play-purple});
+        }
+    }
+
+    //Link
+    &__link {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-link-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-link-white});
+        }
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-link-grey});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-link-purple});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-link-red});
+        }
+    }
+
+    //External link
+    &__external {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-external-blue});
+           
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-external-white});
+           
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-external-red});
+           
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-external-purple});
+           
+        }
+        &-alt--blue{
+            background-image: url(#{$img-path}/#{$icon-external-alt-blue});
+        }
+    }    
+
+    //Menu
+    &__menu {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-menu-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-menu-white});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-menu-purple});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-menu-red});
+        }
+
+    }
+
+    //Twitter
+    &__twitter {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-twitter-blue});
+
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-twitter-red});
+
+        }
+        &-circle--red {
+            background-image: url(#{$img-path}/#{$icon-twitter-circle-red});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-twitter-white});
+
+        }
+        &--grey {
+            background-image: url(#{$img-path}/#{$icon-twitter-grey});
+
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-twitter-purple});
+
+        }
+        &--black {
+            background-image: url(#{$img-path}/#{$icon-twitter-black});
+
+        }
+    }
+
+    &__facebook {
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-facebook-white});
+
+        }
+    }    
+
+    &__whatsapp {
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-whatsapp-white});
+
+        }
+    }    
+
+    &__email {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-email-purple});
+
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-email-white});
+
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-email-red});
+
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-email-blue});
+
+        }
+    }    
+
+    &__spotify{
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-spotify-white});
+
+        }
+    }    
+
+    &__apple-podcasts{
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-apple-podcasts-white});
+
+        }
+    }    
+
+    &__google-podcasts{
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-google-podcasts-white});
+
+        }
+    }
+
+    &__youtube--red {
+        background-image: url(#{$img-path}/#{$icon-youtube-red});
+    }
+
+    &__youtube--white {
+        background-image: url(#{$img-path}/#{$icon-youtube-white});
+    }
+
+    &__youtube-circle--red {
+        background-image: url(#{$img-path}/#{$icon-youtube-circle-red});
+    }
+
+    &__youtube-square--purple{
+        background-image: url(#{$img-path}/#{$icon-youtube-square-purple});
+    }
+
+    &__teacher-whiteboard {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-teacher-whiteboard-blue});
+        }
+        &--black {
+            background-image: url(#{$img-path}/#{$icon-teacher-whiteboard-black});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-teacher-whiteboard-purple});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-teacher-whiteboard-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-teacher-whiteboard-red});
+        }
+    }
+
+    &__school-check {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-school-check-blue});
+        }
+        &--black {
+            background-image: url(#{$img-path}/#{$icon-school-check-black});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-school-check-purple});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-school-check-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-school-check-red});
+        }
+    }             
+
+    &__text-document {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-text-document-purple});
+        }
+    }  
+
+    &__globe-africa {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-globe-africa-purple});
+        }
+    }      
+
+    &__people-group {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-people-group-purple});
+        }
+    }       
+    
+    &__questions {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-questions-purple});
+        }
+    }       
+
+    &__marker {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-marker-purple});
+        }
+    }  
+
+    &__blank-file {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-blank-file-purple});
+        }
+    }  
+
+    &__school {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-school-purple});
+        }
+    }  
+
+    //File type prefix text
+    &__file {
+        &--pdf-text:before {
+            content: '[PDF] ';
+        }
+        &--doc-text:before {
+            content: '[DOC] ';
+        }
+        &--xls-text:before {
+            content: '[XLS] ';
+        }
+        &--ppt-text:before {
+            content: '[PPT] ';
+        }
+        &--exe-text:before {
+            content: '[EXE] ';
+        }
+        &--zip-text:before {
+            content: '[ZIP] ';
+        }
+        &--mp3-text:before {
+            content: '[MP3] ';
+        }
+    }  
+    //File type prefix text
+    &__file {           
+        &--doc-icon  {
+            background-image: url(#{$img-path}/#{$icon-doc});
+        }
+        &--exe-icon {
+            background-image: url(#{$img-path}/#{$icon-file});
+        }
+        &--file-icon {
+            background-image: url(#{$img-path}/#{$icon-file});
+        }
+        &--mp3-icon {
+            background-image: url(#{$img-path}/#{$icon-mp3});
+        }
+        &--pdf-icon {
+            background-image: url(#{$img-path}/#{$icon-pdf});
+        }
+        &--ppt-icon {
+            background-image: url(#{$img-path}/#{$icon-ppt});
+        }
+        &--web-icon {
+            background-image: url(#{$img-path}/#{$icon-web});
+        }
+        &--xls-icon {
+            background-image: url(#{$img-path}/#{$icon-xls});
+        }
+        &--zip-icon {
+            background-image: url(#{$img-path}/#{$icon-zip});
+        }
+    }  
+
+    &__login {
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-login-purple});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-login-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-login-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-login-red});
+        }
+    }
+
+    &__phone{
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-phone-purple});
+        }
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-phone-blue});
+        }
+        &--grey{
+            background-image: url(#{$img-path}/#{$icon-phone-grey});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-phone-red});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-phone-white});
+        }
+    }
+    &__upload {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-upload-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-upload-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-upload-red});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-upload-purple});
+        }
+    }
+    &__page {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-page-blue});
+        }
+    }
+    &__teacher--blue{
+        background-image: url(#{$img-path}/#{$icon-teacher-blue});
+    }
+    &__globe--blue{
+        background-image: url(#{$img-path}/#{$icon-globe-blue});
+    }
+    &__download {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-download-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-download-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-download-red});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-download-purple});
+        }
+    }
+    &__award--blue{
+        background-image: url(#{$img-path}/#{$icon-award-blue});
+        
+    }
+    &__bank--blue{
+        background-image: url(#{$img-path}/#{$icon-bank-blue});
+    }
+    &__user--purple{
+        background-image: url(#{$img-path}/#{$icon-user-purple});
+    }
+    &__users {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-users-blue});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-users-purple});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-users-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-users-red});
+        }
+    }
+    &__user-chalkboard--purple {
+        background-image: url(#{$img-path}/#{$icon-user-chalkboard--purple});
+    }
+    &__exampro--logo{
+        background-image: url(#{$img-path}/#{$icon-exampro-logo});
+    }
+    &__teachit--logo{
+        background-image: url(#{$img-path}/#{$icon-teachit-logo});
+    }
+    &__star {
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-star-purple});
+        }
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-star-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-star-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-star-red});
+        }
+    }
+    &__sort-by {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-sort-by-blue});
+        }
+        &--grey{
+            background-image: url(#{$img-path}/#{$icon-sort-by-grey});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-sort-by-purple});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-sort-by-red});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-sort-by-white});
+        }
+    }
+    &__filter {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-filter-blue});
+        }
+        &--grey{
+            background-image: url(#{$img-path}/#{$icon-filter-grey});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-filter-purple});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-filter-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-filter-red});
+        }
+    }
+    &__pointer-left--grey{
+        background-image: url(#{$img-path}/#{$icon-pointer-left-grey});
+    }
+    &__pointer-right--grey{
+        background-image: url(#{$img-path}/#{$icon-pointer-right-grey});
+    }
+    &__write--blue{
+        background-image: url(#{$img-path}/#{$icon-write-blue});
+    }
+    &__develop--blue{
+        background-image: url(#{$img-path}/#{$icon-develop-blue});
+    }
+    &__scan--blue{
+        background-image: url(#{$img-path}/#{$icon-scan-blue});
+    }
+    &__linkedin--blue{
+        background-image: url(#{$img-path}/#{$icon-linkedin-blue});
+    }
+    &__linkedin--red{
+        background-image: url(#{$img-path}/#{$icon-linkedin-red});
+    }
+    &__linkedin--white{
+        background-image: url(#{$img-path}/#{$icon-linkedin-white});
+    }
+    &__linkedin-circle--red{
+        background-image: url(#{$img-path}/#{$icon-linkedin-circle-red});
+    }
+    &__pen {
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-pen-purple});
+        }
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-pen-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-pen-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-pen-red});
+        }
+    }
+    &__pen-paper {
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-pen-paper-purple});
+        }
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-pen-paper-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-pen-paper-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-pen-paper-red});
+        }
+    }
+    &__wallet {
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-wallet-purple});
+        }
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-wallet-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-wallet-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-wallet-red});
+        }
+    }
+    &__meeting {
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-meeting-purple});
+        }
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-meeting-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-meeting-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-meeting-red});
+        }
+    }
+    &__bell {
+        &--blue{
+            background-image: url(#{$img-path}/#{$icon-bell-blue});
+        }
+        &--white{
+            background-image: url(#{$img-path}/#{$icon-bell-white});
+        }
+        &--red{
+            background-image: url(#{$img-path}/#{$icon-bell-red});
+        }
+        &--purple{
+            background-image: url(#{$img-path}/#{$icon-bell-purple});
+        }
+    }
+    &__video--teal{
+        background-image: url(#{$img-path}/#{$icon-video-teal});
+    }
+    &__textbook--turquoise{
+        background-image: url(#{$img-path}/#{$icon-textbook-turquoise});
+    }
+    &__smiley--purple{
+        background-image: url(#{$img-path}/#{$icon-smiley-purple});
+    }
+    &__head-open-book--purple{
+        background-image: url(#{$img-path}/#{$icon-head-open-book-purple});
+    }
+    &__running-figure--purple{
+        background-image: url(#{$img-path}/#{$icon-running-figure-purple});
+    }
+    &__graduate--purple{
+        background-image: url(#{$img-path}/#{$icon-graduate-purple});
+    }
+    &__graph--purple {
+        background-image: url(#{$img-path}/#{$icon-graph-purple});
+    }
+    &__desktop--purple {
+        background-image: url(#{$img-path}/#{$icon-desktop-purple});
+    }
+    &__paperclip--purple {
+        background-image: url(#{$img-path}/#{$icon-paperclip-purple});
+    }
+    &__flask--purple {
+        background-image: url(#{$img-path}/#{$icon-flask-purple});
+    }
+    &__qstroke {
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-qstroke-red});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-qstroke-purple});
+        }
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-qstroke-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-qstroke-white});
+        }
+    }
+    &__audio {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-audio-blue});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-audio-purple});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-audio-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-audio-red});
+        }
+    }
+    &__plus {
+        &--blue {
+            background-image: url(#{$img-path}/#{$icon-plus-blue});
+        }
+        &--white {
+            background-image: url(#{$img-path}/#{$icon-plus-white});
+        }
+        &--red {
+            background-image: url(#{$img-path}/#{$icon-plus-red});
+        }
+        &--purple {
+            background-image: url(#{$img-path}/#{$icon-plus-purple});
+        }
+    }
+    
+}

@@ -1,0 +1,288 @@
+//
+// #BORDERS OVERRIDES
+//
+// $color-border-default: #ddd;
+// $border-width: 0.0625rem;
+// $border-style: solid;
+// $border-style--dashed: dashed;
+
+.u-b {
+    border: $border-width $border-style $color-border-default;
+
+    &--none {
+        border: none;
+    }
+
+    &--round-12 {
+        border-radius: 12px;
+    }
+    &--top-left-bottom-right-30 {
+        border-radius: 30px 0px;
+    }
+
+    &--top {
+        border-top: $border-width $border-style $color-border-default;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    &--bottom {
+        border-bottom: $border-width $border-style $color-border-default;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    &--top-bottom {
+        border-top: $border-width $border-style $color-border-default;
+        border-bottom: $border-width $border-style $color-border-default;
+        border-left: none;
+        border-right: none;
+    }
+
+    &--left {
+        border-left: $border-width $border-style $color-border-default;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+
+        &--dashed {
+            border-left: $border-width $border-style--dashed $color-forms-input-is-inactive;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+    }
+
+    &--right {
+        border-right: $border-width $border-style $color-border-default;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+
+        &--dashed {
+            border-right: $border-width $border-style--dashed $color-border-default;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+        }
+    }
+
+    &--left-right {
+        border-left: $border-width $border-style $color-border-default;
+        border-right: $border-width $border-style $color-border-default;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &--bottom-right {
+        border-left: none;
+        border-right: $border-width $border-style $color-border-default;
+        border-top: none;
+        border-bottom: $border-width $border-style $color-border-default;
+    }
+    &--line-middle{
+        width:400px;
+        height:auto;
+        background-image: linear-gradient($color-brand-primary, $color-brand-primary);
+        background-size: 2px  100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index:-1;
+        &--primary{
+            background-image: linear-gradient($color-brand-primary, $color-brand-primary);
+        }
+        &--secondary{
+            background-image: linear-gradient($color-brand-secondary, $color-brand-secondary);
+        }
+    }
+    &--radius-bottom{
+        &--right{
+            border-bottom-right-radius:8.15rem;
+        }
+        &--left{
+            border-bottom-left-radius: 8.15rem;
+        }
+
+    }
+    &--radius-top{
+        &--right{
+            border-top-right-radius:8.15rem;
+        }
+        &--left{
+            border-top-left-radius: 8.15rem;
+        }
+    }
+
+
+    // Mobile only
+    @include breakpoint ($screen-only, $mobile-to) {
+        html.rwd & {
+            &__mobile {
+                border: $border-width $border-style $color-border-default;
+
+                &--none {
+                    border: 0;
+                }
+                &--bottom {
+                    border-bottom: $border-width $border-style $color-border-default;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
+            
+                &--top-bottom {
+                    border-top: $border-width $border-style $color-border-default;
+                    border-bottom: $border-width $border-style $color-border-default;
+                    border-left: none;
+                    border-right: none;
+                }
+                    &--radius-bottom{
+                        &--right{
+                            border-bottom-right-radius:8.15rem;
+                        }
+                        &--left{
+                            border-bottom-left-radius: 8.15rem;
+                        }
+
+                    }
+                    &--radius-top{
+                        &--right{
+                            border-top-right-radius:8.15rem;
+                        }
+                        &--left{
+                            border-top-left-radius: 8.15rem;
+                        }
+                    }
+
+            }
+        }
+    }
+
+    //Tablet
+    @include breakpoint($screen-only, $tablet-from, $tablet-to) {
+        &__tablet {
+            border: $border-width $border-style $color-border-default;
+            
+            &--none {
+                border: 0;
+            }
+            
+            &--left {
+                border-left: $border-width $border-style $color-border-default;
+                border-top: none;
+                border-bottom: none;
+                border-right: none;
+        
+                &--dashed {
+                    border-left: $border-width $border-style--dashed $color-forms-input-is-inactive;
+                    border-top: none;
+                    border-bottom: none;
+                    border-right: none;
+                }
+            }
+
+            &--right {
+                border-right: $border-width $border-style $color-border-default;
+                border-top: none;
+                border-bottom: none;
+                border-left: none;
+        
+                &--dashed {
+                    border-right: $border-width $border-style--dashed $color-border-default;
+                    border-top: none;
+                    border-bottom: none;
+                    border-left: none;
+                }
+            }
+            &--bottom {
+                border-bottom: $border-width $border-style $color-border-default;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+            }
+        
+            &--top-bottom {
+                border-top: $border-width $border-style $color-border-default;
+                border-bottom: $border-width $border-style $color-border-default;
+                border-left: none;
+                border-right: none;
+            }
+            &--radius-bottom{
+                &--right{
+                    border-bottom-right-radius:8.15rem;
+                }
+                &--left{
+                    border-bottom-left-radius: 8.15rem;
+                }
+
+            }
+            &--radius-top{
+                &--right{
+                    border-top-right-radius:8.15rem;
+                }
+                &--left{
+                    border-top-left-radius: 8.15rem;
+                }
+            }
+
+        }
+    }
+
+    //Desktop
+    @include breakpoint($screen-only, $desktop-from) {
+        &__desktop {
+            border: $border-width $border-style $color-border-default;
+            
+            &--none {
+                border: 0;
+            }
+            
+            &--left {
+                border-left: $border-width $border-style $color-border-default;
+                border-top: none;
+                border-bottom: none;
+                border-right: none;
+        
+                &--dashed {
+                    border-left: $border-width $border-style--dashed $color-forms-input-is-inactive;
+                    border-top: none;
+                    border-bottom: none;
+                    border-right: none;
+                }
+            }
+
+            &--right {
+                border-right: $border-width $border-style $color-border-default;
+                border-top: none;
+                border-bottom: none;
+                border-left: none;
+        
+                &--dashed {
+                    border-right: $border-width $border-style--dashed $color-border-default;
+                    border-top: none;
+                    border-bottom: none;
+                    border-left: none;
+                }
+            }
+            &--radius-bottom{
+                &--right{
+                    border-bottom-right-radius:8.15rem;
+                }
+                &--left{
+                    border-bottom-left-radius: 8.15rem;
+                }
+
+            }
+            &--radius-top{
+                &--right{
+                    border-top-right-radius:8.15rem;
+                }
+                &--left{
+                    border-top-left-radius: 8.15rem;
+                }
+            }
+        }
+    }
+}

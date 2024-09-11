@@ -1,0 +1,20 @@
+///*----------------------------------*\
+//  #ALIASES
+//\*----------------------------------*/
+
+// Map some nicer/shorter aliases to make things a little easier to work with.
+
+$spacing-unit:      $base-spacing-unit;
+$mobile-from:       $media-mobile-from;
+$mobile-to:         $media-mobile-to;
+$mobile-small-from: $media-mobile-small-from;
+$mobile-small-to:   $media-mobile-small-to;
+$tablet-from:       $media-tablet-from;
+$tablet-small-to:   $media-tablet-small-to;
+$tablet-small-from: $media-tablet-small-from;
+$tablet-to:         $media-tablet-to;
+$desktop-from:      $media-desktop-from;
+$desktop-to:        $media-desktop-to;
+$desktop-large-from:  $media-desktop-large-from;
+$screen-only:       $media-screen-only;
+$webkit:            $media-webkit;

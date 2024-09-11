@@ -1,0 +1,41 @@
+//------------------------------------*\
+//  #PAGE
+//------------------------------------*/
+
+//Page-level styling (e.g. HTML and BODY elements).
+
+::-moz-selection {
+    background: $color-interface-blue;
+    text-shadow: none;
+    color: white;
+}
+
+::selection {
+    background: $color-interface-blue;
+    text-shadow: none;
+    color: white;
+}
+
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+    @include font-family(default);
+
+    background-color: $color-page-background;
+    color: $color-page-text;
+}
+
+@include breakpoint($screen-only, $mobile-to) {
+    .is-sticky {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include breakpoint($screen-only, $mobile-to) {
+        .noscroll {
+            overflow: hidden;
+        }
+    }
+}

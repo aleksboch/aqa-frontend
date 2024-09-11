@@ -1,0 +1,154 @@
+// ------------------------------------
+//   #DROPDOWN
+//   styles
+// ------------------------------------
+
+.c-dropdown {
+    display: none;
+    max-width: 18rem;
+
+    @include breakpoint($screen-only, $mobile-to) {
+        border: none;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        //margin-top: 1rem;
+        max-width: 100%;
+
+    }
+
+
+    &.is-active {
+        display: inline-block;
+        position:absolute;
+        z-index:11;
+        @include breakpoint($screen-only, $mobile-to) {
+            position: fixed;
+            z-index: 1000;
+            top: 6rem;
+        }
+        @include breakpoint($screen-only, $mobile-small-to) {
+            top: 5rem;
+        }
+
+    }
+
+    &--full {
+        @include breakpoint($screen-only, $mobile-to) {
+            background-color: $color-brand-secondary;
+            height: 100%;
+            overflow-y: scroll;
+        }
+        &.is-active {
+            top: 0;
+        }
+    }
+
+    &--parent {
+        cursor: pointer;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        top: 0;
+        padding: 0;
+
+        @include breakpoint($screen-only, $mobile-to) {
+            position: relative;
+            width: 100%;
+        }
+
+
+        &__item {
+            cursor: pointer;
+            background-color: $color-brand-secondary;
+            border-bottom: 1px solid $color-tabs-border;
+
+            &:last-child {
+               border-bottom: 0;
+            }
+
+            &--header {
+                color: $color-nav-tabs;
+                padding: 0;
+                margin: 0;
+                font-size: .9rem;
+                border-bottom: 0;
+
+                @include breakpoint($screen-only, $mobile-to) {
+                    font-size: 1rem;
+                    display: block;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    @include hocus {
+                        background: url(#{$img-path}/#{$icon-right-arrow-white}) 96% 50% no-repeat;
+                        background-color: $color-brand-secondary;
+                        background-size: 1.25rem;
+                        text-decoration: underline;
+                        color: $color-nav-tabs--hocus;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 1px solid $color-nav-tabs-border;
+                }
+
+            }
+
+            &__link {
+                color: $color-page-background;
+                display: inline-block;
+                padding: 0.75rem;
+                width: 100%;
+
+                &[aria-selected="true"] {
+                    background-color: $color-page-background;
+                    color: $color-grey-black;
+                    border: 1px solid $color-grey;
+                }
+
+                &--header {
+                    padding: .4rem .8rem;
+                    color: $color-grey-black;
+                    display: block;
+                    border: 1px solid $color-nav-tabs-border;
+                    background-color: $color-nav-tabs-background;
+                    border-bottom: none;
+
+                    @include hocus {
+                        background-color: $color-brand-secondary;
+                        color: $color-nav-tabs--hocus;
+                        text-decoration: underline;
+                    }
+
+                    @include breakpoint($screen-only, $mobile-to) {
+                        padding: .9rem 1rem;
+                        background: url(#{$img-path}/#{$icon-right-arrow-grey}) 96% 50% no-repeat;
+                        background-size: 1.25rem;
+                        background-color: $color-nav-tabs-background;
+
+                        @include hocus {
+                            background: url(#{$img-path}/#{$icon-right-arrow-white}) 96% 50% no-repeat;
+                            background-size: 1.25rem;
+                            background-color: $color-brand-secondary;
+                        }
+                    }
+    
+                    &[aria-selected="true"] {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &.is-active {
+            background-color: $color-page-background;
+            color: $color-grey-black;
+        }
+    }
+}

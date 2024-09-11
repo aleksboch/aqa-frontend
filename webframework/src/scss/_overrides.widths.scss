@@ -1,0 +1,190 @@
+//------------------------------------*\
+//   #WIDTHS
+//------------------------------------*/
+
+.u-w-auto {
+    width: auto !important;
+}
+
+.u-w2 {
+    width: 2rem !important;
+}
+
+.u-w3 {
+    width: 3rem !important;
+}
+
+.u-w4 {
+    width: 4rem !important;
+}
+
+.u-w5 {
+    width: 5rem !important;
+}
+
+.u-w6 {
+    width: 6rem !important;
+}
+
+.u-w7 {
+    width: 7rem !important;
+}
+
+.u-w8 {
+    width: 8rem !important;
+}
+
+.u-w9 {
+    width: 9rem !important;
+}
+
+.u-w10 {
+    width: 10rem !important;
+}
+
+.u-w15 {
+    width: 15rem !important;
+}
+
+.u-w20 {
+    width: 20rem !important;
+}
+
+.u-w10p {
+    width: 10% !important;
+}
+
+.u-w20p {
+    width: 20% !important;
+}
+
+.u-w30p {
+    width: 30% !important;
+}
+
+.u-w40p {
+    width: 40% !important;
+}
+
+.u-w50p {
+    width: 50% !important;
+}
+
+.u-w60p {
+    width: 60% !important;
+}
+
+.u-w70p {
+    width: 70% !important;
+}
+
+.u-w80p {
+    width: 80% !important;
+}
+
+.u-w90p {
+    width: 90% !important;
+}
+
+.u-w100p {
+    width: 100% !important;
+}
+
+@include breakpoint($screen-only, $tablet-from, $tablet-to) {
+    .u-md-w10p {
+        width: 10% !important;
+    }
+    .u-md-w20p {
+        width: 20% !important;
+    }
+    .u-md-w30p {
+        width: 30% !important;
+    }
+    .u-md-w40p {
+        width: 40% !important;
+    }
+    .u-md-w50p {
+        width: 50% !important;
+    }
+    .u-md-w60p {
+        width: 60% !important;
+    }
+    .u-md-w70p {
+        width: 70% !important;
+    }    
+    .u-md-w80p {
+        width: 80% !important;
+    }    
+    .u-md-w90p {
+        width: 90% !important;
+    }    
+    .u-md-w100p {
+        width: 100% !important;
+    }            
+}
+
+@include breakpoint($screen-only, $desktop-from, $desktop-to) {
+    .u-lg-w10p {
+        width: 10% !important;
+    }
+    .u-lg-w20p {
+        width: 20% !important;
+    }
+    .u-lg-w30p {
+        width: 30% !important;
+    }
+    .u-lg-w40p {
+        width: 40% !important;
+    }
+    .u-lg-w50p {
+        width: 50% !important;
+    }
+    .u-lg-w60p {
+        width: 60% !important;
+    }
+    .u-lg-w70p {
+        width: 70% !important;
+    }    
+    .u-lg-w80p {
+        width: 80% !important;
+    }    
+    .u-lg-w90p {
+        width: 90% !important;
+    }    
+    .u-lg-w100p {
+        width: 100% !important;
+    }            
+}
+
+@include breakpoint($screen-only, $desktop-large-from) {
+    .u-xlg-w10p {
+        width: 10% !important;
+    }
+    .u-xlg-w20p {
+        width: 20% !important;
+    }
+    .u-xlg-w30p {
+        width: 30% !important;
+    }
+    .u-xlg-w40p {
+        width: 40% !important;
+    }
+    .u-xlg-w50p {
+        width: 50% !important;
+    }
+    .u-xlg-w60p {
+        width: 60% !important;
+    }
+    .u-xlg-w70p {
+        width: 70% !important;
+    }    
+    .u-xlg-w80p {
+        width: 80% !important;
+    }    
+    .u-xlg-w90p {
+        width: 90% !important;
+    }    
+    .u-xlg-w100p {
+        width: 100% !important;
+    }  
+}

@@ -1,0 +1,12 @@
+//------------------------------------*\
+//  #LIST-BARE
+//------------------------------------*/
+
+.o-list-bare {
+    list-style: none;
+    list-style-position: inside;
+    //padding-left: 0;
+    .o-list-bare {
+    	padding-left: 1.2em;
+    }
+}

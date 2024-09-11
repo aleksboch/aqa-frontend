@@ -1,0 +1,37 @@
+// ------------------------------------
+//   #Tabs
+// ------------------------------------
+
+// Custom tabs for nexus products
+
+.c-tabs {
+
+  	&__list {
+
+		&__item {
+
+		    &__link {
+		    
+		        @include hocus {
+		        }
+		        
+		        &.is-active {
+		        }
+
+		        &.is-first {
+		        }
+
+		        &.is-last {
+		        }
+
+		    }
+		}
+	}
+
+	&__content {
+
+        &.is-active {
+        }
+
+	}
+}

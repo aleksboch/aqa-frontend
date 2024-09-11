@@ -1,0 +1,37 @@
+//
+// #TEXT OVERRIDES
+//
+
+.u-t-center {
+    text-align: center;
+}
+
+.u-t-right {
+    text-align: right;
+}
+
+.u-t-left {
+    text-align: left;
+}
+
+.u-t-word-break {
+    word-break: break-all;
+
+    &--word {
+        word-break: break-word;
+    }
+}
+
+.u-f-medium {
+    @include font-family(default);
+    @include font-weight(medium);
+}
+
+.u-f-demi {
+    @include font-family(default);
+    @include font-weight(bold);
+}
+
+.u-f-default {
+    @include font-family(default);
+}

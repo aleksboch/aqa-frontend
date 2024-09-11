@@ -1,0 +1,124 @@
+// ------------------------------------
+//   #LINKS
+// ------------------------------------
+
+@mixin shared-links-css() {
+    color: $color-links-content-hover;
+    background-image: url(#{$img-path}/#{$icon-right-arrow-blue});
+    background-color: $color-nav-background-hover;
+    background-size: 1rem;
+}
+
+//Vertical list of links
+.c-link {
+    &__list {
+        list-style: none;
+        border-top: $color-grey solid 1px;
+
+        &__item {
+            list-style-type: none;
+            
+            &__link {
+                display: block;
+                background: url(#{$img-path}/#{$icon-right-arrow-grey}) no-repeat 98% 50%;
+                background-size: 1rem;
+                border-bottom: $color-grey solid 1px;
+                padding: .8rem 1.5rem .8rem 1rem;
+                color: $color-brand-secondary;
+                line-height: 1.4rem;
+                &:hover {
+                    @include shared-links-css();
+                }
+                &__text {
+                    color: $color-grey-black;
+                }
+
+                &.is-active {
+                    background: none;
+                    color: $color-grey-black;
+                }
+            }
+
+            & & &__link { //nested links
+                padding-left: 2rem;
+            }
+        }
+        
+        & & { //nested lists
+            border-top: 0 none;
+        }
+
+    }
+}
+
+//Horizontal grey list of links
+.c-horizontal-link {
+    &__list {
+        list-style: none;
+        display: inline-table;
+        border-left: $color-grey solid 1px;
+
+        &__item {
+            list-style-type: none;
+            display: table-cell;
+
+            &__link {
+                display: block;
+                border-right: $color-grey solid 1px;
+                padding: .8rem 1.5rem .8rem 1.5rem;
+                color: $color-brand-primary;
+                @include font-family(default);
+                @include font-weight(bold);
+                line-height: 1.4rem;
+                &:hover {
+                    @include shared-links-css();
+                    background-image: none;
+                }
+
+                &.is-active {
+                    background: $color-page-background;
+                    color: $color-grey-black;
+                }
+
+            }
+        }
+    }
+}
+
+//Vertical grey list of links
+.c-vertical-link {
+    &__list {
+        list-style: none;
+        display: block;
+        border-left: $color-grey solid 1px;
+        border-top: $color-grey solid 1px;
+        width: 100%;
+
+        &__item {
+            list-style-type: none;
+            display: block;
+            width: 100%;
+
+            &__link {
+                display: block;
+                border-right: $color-grey solid 1px;
+                border-bottom: $color-grey solid 1px;
+                padding: .8rem 1.5rem .8rem 1.5rem;
+                color: $color-brand-primary;
+                @include font-family(default);
+                @include font-weight(medium);
+                line-height: 1.4rem;
+                &:hover {
+                    @include shared-links-css();
+                    background-image: none;
+                }
+
+                &.is-active {
+                    background: $color-page-background;
+                    color: $color-grey-black;
+                }
+
+            }
+        }
+    }
+}

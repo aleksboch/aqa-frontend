@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 216 160" version="1.1" viewBox="0 0 216 160" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#DC7D28;}
+	.st1{display:none;}
+	.st2{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#41823E;}
+</style>
+
+	<path class="st0" d="M15,21.9h106.9v17.8H15V21.9z M15,57.5h106.9v17.8H15V57.5z M15,110.9h71.2V93.1H15V110.9z M202,84.2   l-13.4-13.4l-48.9,49L113,93.1l-13.4,13.4l40.2,40.1L202,84.2z"/>
+
+<g class="st1">
+	<path class="st2" d="m14.1 38.8v-16.2h130.1v16.3h-130.1zm0 16.3h130.1v16.3h-130.1v-16.3zm0 65.1h81.3v16.3h-81.3v-16.3zm0-16.3h130.1v-16.3h-130.1v16.3z"/>
+</g>
+</svg>

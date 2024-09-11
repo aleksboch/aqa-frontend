@@ -1,0 +1,60 @@
+// ------------------------------------
+//   #ANIMATION
+//   styles
+// ------------------------------------
+
+// loading page container for c-anim-loading
+// 
+// Usage:
+//
+// <div class="c-anim-loading-container"><div class="c-anim-loading"></div></div>
+// 
+//
+
+.c-anim-loading-container {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    margin-left: 0;
+    margin-top: 0;
+    width: 2rem;
+    z-index: 9000;
+}
+
+.c-anim-loading,
+.ng-cloak {
+    @include loading-animation;
+}
+
+.c-anim-loading,
+.c-anim-loading:after,
+.ng-cloak,
+.ng-cloak:after {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

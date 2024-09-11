@@ -1,0 +1,59 @@
+// ------------------------------------
+//   #HEADER
+//   styles
+// ------------------------------------
+
+.c-header {
+    padding: 0rem 0rem 1rem 0rem;
+    //overflow:hidden;
+
+    &.is-active {
+        position: relative;
+        z-index: 55;
+        background-color: $color-page-background;
+    }
+
+    &__inner {
+        margin: 0 0 .5rem;
+        padding: 0.5rem 1rem 0.2rem 1rem;
+        &.row {
+            max-width: 90rem;
+            margin: auto
+        }
+
+        &__wrapper-nav.col-xs {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &--small {
+        min-height: 3.5rem;
+    }
+}
+
+html.rwd {
+    @include breakpoint($screen-only, $mobile-to) {
+        .c-header {
+            height: 6.5em;
+
+            &__inner {
+                border-bottom: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+html.rwd {
+    @include breakpoint($screen-only, $mobile-small-to) {
+        .c-header {
+            height: 5.5em;
+
+            &__inner {
+                border-bottom: 0;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,507 @@
+// Forms components
+// ------------------------------------
+// label becomes the checkbox and radio button 
+// over rides the standard check box and radio button based on
+// http://code.stephenmorley.org/html-and-css/styling-checkboxes-and-radio-buttons/
+//
+
+.c-form {
+    &__label {
+        //These styles are for custom checkbox and radio buttons
+        &-checkbox,
+        &-radio {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-left: .5rem;
+            padding: .3rem 0 .3rem 1rem;
+            line-height: 1.5rem;
+            text-indent: -1.7rem;
+
+            &-grey-outline {
+                display: inline-block;
+                width: .875rem;
+                height: .875rem;
+                margin: .25rem .5rem .25rem .25rem;
+                border: 0.0625rem solid $color-forms-radio-check-outline;
+                vertical-align: bottom;
+
+                &-circle {
+                    border-radius: 1.25rem;
+
+                    &-inner-circle {
+                        display: block;
+                        width: .5rem;
+                        height: .5rem;
+                        margin: .125rem;
+                    }
+                }
+
+                &--loading {
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    background-image: url(#{$img-path}/#{$icon-anim-loading-purple});
+                    background-size: .75rem .75rem;
+                    border: none;
+
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                        background-image: url(#{$img-path}/#{$gif-anim-loading-purple});
+                    }
+                }
+                //large variant here for mobile
+                &--large {
+                    @media only screen and (max-width: 40em) {
+                        width: 1.75rem;
+                        height: 1.75rem;
+                    }
+                }
+            }
+            //to work alongside the large variant
+            &--large {
+                @media only screen and (max-width: 40em) {
+                        line-height: 2.25rem;
+                    }
+            }
+        }
+    }
+
+    &__input {
+        &__checkbox {
+      
+           width:0; 
+           height: 0;
+           margin: 0;
+           display: block;
+          // visibility: hidden;
+          position: absolute;
+          left: -9999px;
+    //overrides default checkbox
+            &:focus + .c-form__label-checkbox
+            .c-form__label-checkbox-grey-outline{
+                
+                box-shadow: 0 0 .3125rem $color-brand-blue;
+                border: .0625rem solid $color-brand-blue;
+                outline: 0;
+            }
+            &:hover + .c-form__label-checkbox
+            .c-form__label-checkbox-grey-outline{
+               
+                box-shadow: 0 0 .3125rem $color-brand-blue;
+                border: .0625rem solid $color-brand-blue;
+                outline: 0;
+            }
+            
+            &:checked
+            + .c-form__label-checkbox
+              .c-form__label-checkbox-grey-outline{
+                background: $color-forms-radio-check url(#{$img-path}/#{$icon-tick-white}) no-repeat center center;
+                background-size: .75rem .75rem;
+                
+                &--loading {
+                    background-color: transparent;
+                    background-image: url(#{$img-path}/#{$icon-anim-loading-purple});
+                    border: none;
+
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                        background-image: url(#{$img-path}/#{$gif-anim-loading-purple});
+                    }
+                }
+                &--large {
+                    @media only screen and (max-width: 40em) {
+                        background-size: 1.75rem 1.75rem;
+                    }               
+                }
+            }
+        }
+
+        &__radio {
+            width: 0;
+            height: 0;
+            margin: 0;
+            display: block;
+            position: absolute;
+            left: -9999px;
+//visibility: hidden;
+            //removes default radio button
+           
+            &:focus  + .c-form__label-radio
+            > .c-form__label-radio-grey-outline-circle{
+                box-shadow: 0 0 .3125rem $color-brand-blue;
+                border: .0625rem solid $color-brand-blue;
+                border-radius: 1.25rem;
+                outline: 0;
+            }
+            &:hover  + .c-form__label-radio
+            > .c-form__label-radio-grey-outline-circle{
+                box-shadow: 0 0 .3125rem $color-brand-blue;
+                border: .0625rem solid $color-brand-blue;
+                border-radius: 1.25rem;
+                outline: 0;
+            }
+            &:checked
+            + .c-form__label-radio
+            > .c-form__label-radio-grey-outline-circle
+            > .c-form__label-radio-grey-outline-circle-inner-circle {
+                border: 0.0625rem solid $color-forms-radio-check;
+                border-radius: 1.125rem;
+                background: $color-forms-radio-check;
+
+                &--large {
+                    @media only screen and (max-width: 40em) {
+                        border: 0.6725rem solid $color-forms-radio-check;
+                    }      
+                }
+            }
+        }
+
+        &__submit {
+            @include transition(none);
+
+            @include hocus {
+                box-shadow: none;
+                border: none;
+                outline: 0;
+            }
+        }
+
+        //Range slider styles
+        //Set padding around the slider component
+        &__range{
+            -webkit-appearance: none;
+            margin: 1rem 0;  
+            border-color: $color-page-background;
+            padding: 1rem 0;
+
+            &:focus {
+                outline: none;
+            }   
+
+            //The line the thumb slider moves along
+            &::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 0.4rem;
+                cursor: pointer;
+                background-color: $color-grey;
+                border-radius: 0rem;
+                border: 2px solid $color-grey;
+            }
+
+            //The thumb slider
+            &::-webkit-slider-thumb {
+                border: 0.75rem solid $color-brand-secondary;
+                height: 0.8rem;
+                width: 0.8rem;
+                border-radius: 0rem;
+                background-color: $color-brand-secondary;
+                cursor: pointer;
+                -webkit-appearance: none;
+                margin-top: -0.75rem;
+            }
+
+            //Firefox
+            &::-moz-range-track {
+                height: 0.3rem;
+                background-color: $color-grey;
+            }
+
+            &:focus::-moz-range-track {
+                width: 100%;  
+                cursor: pointer;
+                border-radius: 0rem;
+                border: 0rem solid $color-grey;
+            }
+
+            &::-moz-range-thumb { 
+                border: 0.35rem solid $color-brand-secondary;
+                width: 1.0rem;
+                border-radius: 0rem;
+                background-color: $color-brand-secondary;
+                cursor: pointer;
+            }
+
+            //ie version
+            &::-ms-track {
+                width: 100%;
+                height: 0.4rem;
+                cursor: pointer;
+                background: transparent;
+                border-color: transparent;
+                color: transparent;
+                background-color: $color-grey 0.2;
+            }
+
+            &::-ms-fill-lower {
+                background: $color-overlay 0.2;
+                border: 0rem solid $color-overlay;
+                border-radius: 0rem;
+            }
+
+            &::-ms-fill-upper {
+                background: $color-grey-dark 0.2;
+                border: 0rem solid $color-overlay;
+                border-radius: 0rem;
+            }
+
+            &::-ms-thumb {
+                border: 0.45rem solid $color-brand-secondary;
+                height: 1rem;
+                width: 1rem;
+                border-radius: 0rem;
+                background-color: $color-brand-secondary;
+                cursor: pointer;
+                height: 0.4rem;
+            }
+
+            &:focus::-ms-fill-lower {
+                background-color: $color-grey 0.2;
+            }
+
+        }
+
+    }
+
+    &__file-upload {
+        &__label {
+            cursor: pointer; 
+            height: 2.6rem;
+            white-space: nowrap;
+            @media only screen and (max-width: 40em) {
+                border-top: $border-width $border-style $color-border-default;
+                border-left: $border-width $border-style $color-border-default;
+                border-right: $border-width $border-style $color-border-default;
+            }
+            @media only screen and (min-width: 40em) {
+                border-bottom: $border-width $border-style $color-border-default;
+                border-left: $border-width $border-style $color-border-default;
+                border-top: $border-width $border-style $color-border-default;
+            }
+        }
+        &__input {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        &__info-wrapper {
+            height: 2.6rem; 
+            text-align: left;
+            padding-left: 1rem;
+            padding-right: 0;
+            margin: 0;
+            display:flex;
+            @media only screen and (max-width: 40em) {
+                border-bottom: $border-width $border-style $color-border-default;
+                border-left: $border-width $border-style $color-border-default;
+                border-right: $border-width $border-style $color-border-default;
+            }
+            @media only screen and (min-width: 40em) {
+                border-bottom: $border-width $border-style $color-border-default;
+                border-top: $border-width $border-style $color-border-default;
+                border-right: $border-width $border-style $color-border-default;
+            }
+        }
+        &__info-text {
+            line-height: 2.6rem;
+            margin-right: auto; 
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &__info-action {
+            justify-content: flex-end;
+        }
+        &__delete-button {
+            background-image: url(#{$img-path}/#{$icon-cross-blue});
+            background-position-x: right;
+            background-position-y: center;
+            background-size: 2rem auto;
+            margin-top: 0.9rem;
+            margin-right: 0.4rem;
+        }
+    }
+
+    &__select {
+        //removes the standard dropdown arrow and put styled arrow in place
+        //based on http://bavotasan.com/2011/style-select-box-using-only-css/
+        //arrow is in _elements.links.scss
+        background: url(#{$img-path}/#{$icon-down-arrow-blue}) no-repeat;
+        background-position: center right .25rem;
+        background-size: 1.14rem;
+        background-color: $color-forms-input-select-background;
+        -webkit-appearance: none;
+
+        //Removes default chrome and safari style
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        overflow: hidden;
+
+        // Removes Default Firefox style
+        background-size: 2rem 1.6rem;
+
+        //Position of the background-image
+        text-indent: 0.01px;
+
+        // Removes default arrow from firefox
+        text-overflow: "";
+        cursor: default;
+
+        // Removes default arrow from firefox
+        &::-ms-expand {
+            // for IE 11
+            display: none;
+        }
+         
+        @include breakpoint($webkit) {
+            padding-right: 1.125rem;
+        }
+        &__single{
+            
+            background: url(#{$img-path}/#{$icon-down-arrow-blue}) no-repeat;
+            background-position: top .75rem right 1.25rem; 
+            overflow: hidden; 
+            background-size: 1.14rem;
+            -webkit-appearance: none;
+            //Removes default chrome and safari style
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -ms-overflow-style: hidden;
+            appearance: none;
+            // Removes Default Firefox style
+            background-size: 2rem 1.6rem;
+            height:3rem;
+            padding: .5rem;
+             @include hocus {
+               height:auto;
+               overflow:auto;
+            }
+            @include transition(.3s ease);
+            &::-ms-expand {
+                // for IE 11
+                display: none;
+                padding: .5rem;
+            }
+
+        }
+        &__multiple{
+            
+            background: url(#{$img-path}/#{$icon-down-arrow-blue}) no-repeat;
+            background-position: top .75rem right 1.25rem; 
+            overflow: hidden; 
+            background-size: 1.14rem;
+            -webkit-appearance: none;
+            //Removes default chrome and safari style
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -ms-overflow-style: hidden;
+            appearance: none;
+            // Removes Default Firefox style
+            background-size: 2rem 1.6rem;
+            height:3rem;
+            padding: .5rem;
+             @include hocus {
+               height:auto;
+               overflow:auto;
+            }
+             @include transition(.3s ease);
+        &::-ms-expand {
+            // for IE 11
+            display: none;
+            padding: .5rem;
+        }
+        // selection list for multi select desktop only
+            &__list{
+       
+                border: .0625rem solid $color-grey;
+                border-bottom:none;
+                list-style:none;
+                margin-bottom: -.6rem;
+          // selection list item for multi select  desktop only 
+            &__item{
+                margin: .5rem 0 .5rem .5rem;
+                padding: .5rem 2rem .5rem .5rem;
+                border: .0625rem solid $color-grey;
+                background: url(#{$img-path}/#{$icon-cross-blue}) no-repeat;
+                background-position: center right ; 
+                background-size: 2rem 1.6rem;
+                display: inline-block;
+                }
+             }
+        }
+      
+     
+    &.is-inactive{
+        background: url(#{$img-path}/#{$icon-down-arrow-grey}) no-repeat;
+        background-color:  $color-grey-light;
+        background-position: center right .25rem;
+        background-size: 1.14rem;
+        -webkit-appearance: none;
+
+        //Removes default chrome and safari style
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        overflow: hidden;
+
+        // Removes Default Firefox style
+        background-size: 2rem 1.6rem;
+
+        //Position of the background-image
+        text-indent: 0.01px;
+
+        // Removes default arrow from firefox
+        text-overflow: "";
+        cursor: default;
+
+        // Removes default arrow from firefox
+        &::-ms-expand {
+            // for IE 11
+            display: none;
+        }
+         
+        @include breakpoint($webkit) {
+            padding-right: 1.125rem;
+        }
+    }
+}  
+    //only for applying colour to text and changing input field borders to red/green/etc with the option to not apply borders and just text
+
+    &__state {
+        display: block;
+
+        &--error-border {
+            border-width: .0625rem;
+            border-style: solid;
+            border-color: $color-forms-notification-error-major;
+            color: $color-forms-notification-error-major;
+        }
+        &--error-border--left {
+            border-left: $border-width solid $color-forms-notification-error-major;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+        &--error-noborder,
+        &--required {
+            color: $color-forms-notification-error-major;
+        }
+
+        &--success-border {
+            border-width: .0625rem;
+            border-style: solid;
+            border-color: $color-forms-notification-success;
+            color: $color-forms-notification-success;
+        }
+    }
+}
+
+.c-form__label-checkbox{ @include hocus() {
+       -webkit-tap-highlight-color: transparent;   
+       cursor: pointer;
+       text-decoration: underline;
+       
+    }
+   
+}
+

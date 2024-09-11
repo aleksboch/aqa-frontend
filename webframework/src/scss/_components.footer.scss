@@ -1,0 +1,180 @@
+// ------------------------------------
+//   #FOOTER
+//   styles
+// ------------------------------------
+
+.c-footer {
+    margin-top: 2rem;
+    background-color: $color-interface-grey-tint-95;
+    color: $color-page-foot;
+
+    .row {
+        //shame
+        margin-left: 0 !important;
+
+        //shame
+        margin-right: 0 !important;
+
+    }
+
+    &__list {
+        //@include display-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+
+        //for the red qstrokes in the footer
+        &::before,
+        //first list column in the footer
+        &--first::before {
+            content: '';
+            background-image: url(#{$img-path}/#{$icon-qstroke-red});
+            position: relative;
+            left: -44px;
+            height: 48px;
+            display: block;
+            background-repeat: no-repeat;
+        }
+
+        //unique styling to handle the first column
+        &--first {    
+            @include breakpoint($screen-only, $mobile-to) {
+                margin-bottom: 0;  
+             }
+        }
+        &::before {
+            //removing the qstroke for mobile in the second column only
+            @include breakpoint($screen-only, $mobile-to) { 
+                html.rwd & {
+                    content: none;
+                }
+            }
+        }
+
+        &__item {
+            list-style: none;
+            padding-left: 1rem;
+            border-left: 1px solid $color-brand-red;
+
+            &:first-child {
+                padding-top: 1rem;
+            }
+
+            &--simple {
+                margin: 0 0 0 1.2em;
+
+                @include breakpoint($screen-only, $mobile-to) {
+                    html.rwd & {
+                        margin: 0 0 0 1.2rem;
+                    }
+                }
+            }
+
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    @include display-flex;
+
+                    -webkit-box-flex: 0;
+                    -webkit-flex: 0 1 auto;
+                    -ms-flex: 0 1 auto;
+                    flex: 0 1 auto;
+                    -webkit-flex-basis: 50%;
+                    -ms-flex-preferred-size: 50%;
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+            }
+
+
+            &__link {
+                display: block;
+                color: $color-brand-purple;
+                @include font-weight(medium);
+            }
+        }
+    }
+
+    &__social-row {
+
+        @include display-flex;
+
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+        max-width: 7rem;
+
+        &__item {
+            background-color: transparent;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 1.875rem 1.25rem;
+            height: 1.875rem;
+            width: 1.875rem;
+            display: block;
+            margin-right: 0.5rem;
+            color: transparent !important;
+
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &--twitter {
+                background-image: url(#{$img-path}/#{$icon-twitter-grey});
+            }
+
+            &--linkedin {
+                background-image: url(#{$img-path}/#{$icon-linkedin-grey});
+            }
+
+            &--youtube {
+                background-image: url(#{$img-path}/#{$icon-youtube-grey});
+            }
+        }
+    }
+
+    &__logo {
+        background-size: 6rem;
+        background-position: right .7rem bottom .3rem;
+        height: 3.5rem;
+
+        &--simple {
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    background-position: left .7rem bottom .3rem;
+                    margin: 0 0 1em 0.3em;
+                }
+            }
+        }
+    }
+
+    &__copyright-text {
+        color: $color-interface-grey-tint-80;
+        margin: 0 0 0 .7rem;
+
+        // @include display-flex;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        padding: .5rem 0 .5rem 0;
+
+        &--simple {
+            margin: 1.8em 0 0 0;
+
+            @include breakpoint($screen-only, $mobile-to) {
+                html.rwd & {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+//Aleks - removed display flex from copright-text and __list due to error showing in IE

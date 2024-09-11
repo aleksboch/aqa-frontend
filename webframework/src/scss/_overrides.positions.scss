@@ -1,0 +1,647 @@
+// ------------------------------------
+//   #POSITIONS
+//   styles
+// ------------------------------------
+
+.mobile-only {
+    display: none;
+} 
+.tablet-only{
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.show-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.fade-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.fade-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+}
+
+// This is for hiding the angular table as it loads
+.ng-cloak * {
+  display: none !important;
+}
+
+//hiding elements but are still accessible for screenreaders
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.u-float-l {
+    float: left;
+}
+
+.u-float-r {
+    float: right;
+}
+
+.u-clear-l {
+    clear: left;
+}
+
+.u-clear-r {
+    clear: right;
+}
+
+// utility classes to alter margin, top and bottom
+//
+.u-m0 {
+    margin: 0;
+}
+
+.u-mt0 {
+    margin-top: 0;
+}
+
+.u-mt0-5 {
+    margin-top: .5rem;
+}
+
+.u-mt1 {
+    margin-top: 1rem
+}
+
+.u-mt1-5 {
+    margin-top: 1.5rem;
+}
+
+.u-mt2 {
+    margin-top: 2rem;
+}
+
+.u-mt2-5 {
+    margin-top: 2.5rem;
+}
+
+.u-mt3 {
+    margin-top: 3rem;
+}
+
+.u-mt3n {
+    margin-top: -3rem;
+}
+
+.u-mt6 {
+    margin-top: 6rem;
+}
+
+.u-mb0 {
+    margin-bottom: 0;
+}
+
+.u-mb0-5 {
+    margin-bottom: .5rem;
+}
+
+.u-mb1 {
+    margin-bottom: 1rem;
+}
+
+.u-mb1-5 {
+    margin-bottom: 1.5rem;
+}
+
+.u-mb2 {
+    margin-bottom: 2rem;
+}
+
+.u-mb2-5 {
+    margin-bottom: 2.5rem;
+}
+
+.u-mb3 {
+    margin-bottom: 3rem;
+}
+
+.u-mb4 {
+    margin-bottom: 4rem;
+}
+
+.u-mb6 {
+    margin-bottom: 6rem;
+}
+
+.u-mr0-3125{
+    margin-right: .3125rem;
+}
+
+.u-mr0-5 {
+    margin-right: -.5rem;
+}
+
+.u-mr1 {
+    margin-right: 1rem;
+}
+
+
+.u-ml0 {
+    margin-left: 0 !important; 
+}
+
+.u-ml0-3125{
+    margin-right: .3125rem;
+}
+
+.u-ml0-5 {
+    margin-left: .5rem; 
+}
+
+.u-ml1 {
+    margin-left: 1rem;
+}
+
+.u-ml1-5 {
+    margin-left: 1.5rem; 
+}
+
+.u-p0 {
+    padding:0;
+}
+
+.u-p1 {
+    padding: 1rem;
+}
+
+.u-p1-5 {
+    padding: 1.5rem;
+}
+
+.u-p2 {
+    padding: 2rem;
+}
+
+.u-p2-5 {
+    padding: 2.5rem;
+}
+
+.u-p3 {
+    padding: 3rem;
+}
+
+.u-p3-5 {
+    padding: 3.5rem;
+}
+
+.u-p4 {
+    padding: 4rem;
+}
+
+.u-pl0 {
+    padding-left: 0;
+}
+
+.u-pl0-5{
+    padding-left: .5rem;
+}
+
+.u-pl1 {
+    padding-left:1rem;
+}
+
+.u-pl1-5{
+    padding-left: 1.5rem;
+}
+
+.u-pl2{
+    padding-left: 2rem;
+}
+
+.u-pl2-7{
+    padding-left: 2.7rem;
+}
+
+.u-pl3{
+    padding-left: 3rem;
+}
+
+.u-pr0{
+    padding-right:0;
+}
+
+.u-pr1{
+    padding-right:1rem;
+}
+
+.u-pr0-5{
+    padding-right: .5rem;
+}
+
+.u-pr2{
+    padding-right: 2rem;
+}
+
+.u-pt0 {
+    padding-top: 0;
+}
+
+.u-pt1{
+    padding-top:1rem;
+}
+
+.u-pt1-5{
+    padding-top:1.5rem;
+}
+
+.u-pt2 {
+    padding-top: 2rem;
+}
+
+.u-pt3 {
+    padding-top: 3rem;
+}
+
+.u-pt4 {
+    padding-top: 4rem;
+}
+
+.u-pb0 {
+    padding-bottom: 0;
+}
+
+.u-pb1 {
+    padding-bottom:1rem;
+}
+
+.u-pb1-5 {
+    padding-bottom:1.5rem;
+}
+
+.u-pb2 {
+    padding-bottom: 2rem;
+}
+
+.u-pb3 {
+    padding-bottom: 3rem;
+}
+
+.u-pb4 {
+    padding-bottom: 4rem;
+}
+
+//utility classes for text alignment
+
+.u-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-bottom{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.u-flex-shrink {
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.u-align--middle{
+    vertical-align: middle;
+}
+
+//required to fix cookie message at bottom of screen
+.u-pos--bottom--full-width {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+@include breakpoint($screen-only, $mobile-to) {
+    html.rwd {
+        .no-scroll {
+            position: fixed;
+        }
+
+        .mobile-only {
+            display: block;
+        }
+
+        .hide-mobile {
+            display: none !important;
+        }
+
+        //used only in conjunction with toggling with
+        //a hidden important state
+        .show-mobile {
+            display: block !important;
+        }
+        
+
+        .align--baseline {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: baseline;
+            -webkit-align-items: baseline;
+            -ms-flex-align: baseline;
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -webkit-flex-basis: 0;
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -webkit-box-pack: baseline;
+            -moz-box-pack: baseline;
+            -ms-flex-pack: baseline;
+            -webkit-justify-content: baseline;
+            justify-content: baseline;
+            -webkit-box-align: baseline;
+            -moz-box-align: baseline;
+        }
+
+        .u-sm-right {
+            text-align: right;
+        }
+        .u-sm-mb0{
+            margin-bottom:0;
+        }
+        .u-sm-mb1{
+            margin-bottom:1rem;
+        }
+        .u-sm-mb2{
+            margin-bottom:2rem;
+        }
+        .u-sm-mb3{
+            margin-bottom:3rem;
+        }
+        .u-sm-mb4{
+            margin-bottom:4rem;
+        }
+        .u-sm-mb5{
+            margin-bottom:5rem;
+        }
+        .u-sm-mb10{
+            margin-bottom:10rem;
+        } 
+        .u-sm-mb11{
+            margin-bottom:11rem;
+        } 
+
+        .u-sm-mt0{
+            margin-top:0;
+        }
+        .u-sm-mt1{
+            margin-top:1rem;
+        }
+        .u-sm-mt2{
+            margin-top:2rem;
+        }
+
+        .u-sm-p0 {
+            padding: 0;
+        }
+        .u-sm-p1-5 {
+            padding: 1.5rem;
+        }
+        .u-sm-pl0 {
+            padding-left:0; 
+        }
+
+        .u-sm-pl0-5 {
+            padding-left:.5rem;
+        }
+
+        .u-sm-pt0 {
+            padding-top:0; 
+        }
+
+        .u-sm-pt1 {
+            padding-top:1rem; 
+        }
+
+        .u-sm-pb0{
+            padding-bottom: 0;
+        }
+    }
+}
+
+@include breakpoint($screen-only, $tablet-from, $tablet-to) {
+    html.rwd {
+        .hide-tablet  {
+            display: none;
+        }
+        .hide-md{
+            display: none;
+        }        
+        .tablet-only{
+            display: block;
+        }
+
+        .u-md-p0 {
+            padding: 0;
+        }
+
+        .u-md-p1 {
+            padding: 1;
+        }
+        
+        .u-md-p2 {
+            padding: 2;
+        }
+        
+        .u-md-p3 {
+            padding: 3;
+        }        
+
+        .u-md-pl0 {
+            padding-left:0; 
+        }
+
+        .u-md-pl0-5 {
+            padding-left:.5rem;
+        }
+
+        .u-md-pl1 {
+            padding-left: 1rem;
+        }        
+
+        .u-md-pl2 {
+            padding-left: 2rem;
+        }        
+
+        .u-md-pr0 {
+            padding-right:0; 
+        }
+
+        .u-md-pr0-5 {
+            padding-right:.5rem;
+        }
+
+        .u-md-pr1 {
+            padding-right: 1rem;
+        }
+
+        .u-md-pr2 {
+            padding-right: 2rem;
+        }          
+
+        .u-md-pt1{
+            padding-top:1rem;
+        }
+
+        .u-md-mb0{
+            margin-bottom:0;
+        }
+        .u-md-mb1{
+            margin-bottom:1rem;
+        }
+        .u-md-mb1-5{
+            margin-bottom: 1.5rem;
+        }
+        .u-md-mb2{
+            margin-bottom: 2rem;
+        }
+        .u-md-mb2-5{
+            margin-bottom: 2.5rem;
+        }
+        .u-md-mb3{
+            margin-bottom: 3rem;
+        }
+
+        .u-md-mt0{
+            margin-top: 0;
+        }
+        .u-md-mt1{
+            margin-top: 1rem;
+        }
+        .u-md-mt1-5{
+            margin-top: 1.5rem;
+        }
+        .u-md-mt2{
+            margin-top: 2rem;
+        }
+        .u-md-mt2-5{
+            margin-top: 2.5rem;
+        }
+        .u-md-mt3{
+            margin-top: 3rem;
+        }                       
+    }
+}
+
+@include breakpoint($screen-only, $desktop-from, $desktop-to) {
+    .u-lg-pl0 {
+        padding-left: 0;
+    }
+
+    .u-lg-pr0 {
+        padding-right: 0;
+    }
+
+    .u-lg-pl0-5 {
+        padding-left: .5rem;
+    }
+
+    .u-lg-pr0-5 {
+        padding-right: .5rem;
+    }
+
+    .u-lg-pl1 {
+        padding-left: 1rem;
+    }
+
+    .u-lg-pr1 {
+        padding-right: 1rem;
+    }
+    
+    .u-lg-pl2 {
+        padding-left: 2rem;
+    }
+
+    .u-lg-pr2 {
+        padding-right: 2rem;
+    }      
+
+    .hide-lg{
+        display: none;
+    }
+}
+
+@include breakpoint($screen-only, $desktop-large-from) {
+    .u-xlg-pl0 {
+        padding-left: 0;
+    }
+
+    .u-xlg-pr0 {
+        padding-right: 0;
+    }    
+    .u-xlg-pl0-5 {
+        padding-left: .5rem;
+    }
+    .u-lg-pr0-5 {
+        padding-right: .5rem;
+    }   
+    .u-xlg-pl1 {
+        padding-left: 1rem;
+    }
+
+    .u-xlg-pr1 {
+        padding-right: 1rem;
+    }
+    
+    .u-xlg-pl2 {
+        padding-left: 2rem;
+    }
+
+    .u-xlg-pr2 {
+        padding-right: 2rem;
+    }        
+
+    .hide-xlg{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

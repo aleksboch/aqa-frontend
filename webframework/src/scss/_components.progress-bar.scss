@@ -1,0 +1,30 @@
+// ------------------------------------
+//   #PROGRESS BAR
+//   styles
+// ------------------------------------
+
+.c-progress-bar {
+  background-color: $color-grey-light;
+  padding:0;
+
+  &--active {
+    background-color: $color-brand-secondary;
+    background-image: none;
+    height: 1rem;
+    transition: none;
+    transition-property: none;
+  }
+
+  &--disabled {
+    background-color: $color-disabled;
+    background-image: none;
+    height: 1rem;
+    transition: none;
+    transition-property: none;
+  }
+
+  &__text {
+    display: block;
+    text-align: center;
+  }
+}
